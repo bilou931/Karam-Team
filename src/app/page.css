@@ -1,0 +1,173 @@
+/* Styles pour la page principale */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 32px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-text {
+    margin-left: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    color: #333;
+  font-family: "Raleway", serif;
+
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #000;
+  }
+  
+
+  .body {
+
+  }
+  /* Section principale */
+  .home-div-pink {
+    width: 100%;
+    display: flex;
+  }
+  .green-home {
+    background-color: #CFDDC4;
+    /* background-color: #BCCFC3; */
+    width: 20%;
+  }
+  .content-section {
+    width: 100%;
+    height: 700px; /* Ajustez la hauteur pour tenir compte de la navbar */
+    /* background-color: #F6CBC4; Rose très clair */
+    background-color: #EA9B8C; /*Rose très clair*/
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.main-info {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  /* padding: 40px; */
+  height: 100%; /* Ajustez pour tenir compte de la navbar */
+}
+.sous-main-info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-text {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.main-title {
+  font-size: 3.1rem;
+  /* font-weight: bold; */
+  color: white;
+  font-family: "Raleway", serif;
+  margin-bottom: 16px;
+}
+
+.main-subtitle {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 24px;
+  max-width: 70%; /* Ajustez selon vos besoins */
+  /* text-align: center; Pour centrer le texte */
+  word-wrap: break-word; /* Permet de casser les mots si nécessaire */
+}
+
+.main-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background-color: #89b982;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 40%;
+  transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+  background-color: #36705E;
+}
+
+  .home-picture {
+    /* width: 50%; */
+    display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: 30px; */
+  }
+
+
+  .photo-grid {
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); 2 colonnes */
+    gap: 6px; /* Espacement entre les photos */
+  }
+  .beginphoto {
+    display: flex;
+    flex-direction: column;
+  }
+  .photo {
+    width: 400px; /* Largeur des photos */
+    height: 250px; /* Hauteur des photos */
+    object-fit: cover; /* Assure un affichage bien cadré des images */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère */
+  }
+  
+  .photo-last {
+    width: 300px; /* Largeur des photos */
+    height: 500px; /* Hauteur des photos */
+    object-fit: cover; /* Assure un affichage bien cadré des images */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère */
+  }
+
+  .border-home {
+    width: 5%;
+  /* background-color: #CFDDC4; */
+    position: relative;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 40px;
+    /* background-color: yellow; */
+  }

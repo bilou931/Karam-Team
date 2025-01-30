@@ -1,0 +1,95 @@
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+  
+  .project-card img {
+    width: 40%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    flex: 1;
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+
+  }
+
+.all-text {
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+  .div-text {
+
+    text-align: center;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+  }
+
+
+  .div-title {
+    margin-top: 80px; 
+    margin-bottom: 50px;
+  }
+  
+  .project-title {
+    font-size: 25px;
+    font-weight: bold;
+    /* margin-bottom: 8px; */
+  }
+  
+  .project-description {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .custom-button {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacement entre le texte et la flèche */
+    background-color: #89b982;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px; /* Coins légèrement arrondis */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #36705E;
+    transform: translateY(-2px); /* Légère élévation au survol */
+  }
+  
+  .button-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-button:hover .button-arrow {
+    transform: translateX(5px); /* La flèche avance légèrement au hover */
+  }
+  

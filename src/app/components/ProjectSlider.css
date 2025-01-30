@@ -1,0 +1,54 @@
+/* Styles pour le composant ProjetSlider */
+
+.projet-slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projet-slider h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+
+
+  }
+  
+  .slider-button {
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2 ease;
+  }
+  
+  .slider-button:hover {
+    background-color: #89b982; /* Gris plus foncé au survol */
+    transform: scale(1.1)
+  }
+  
+  .button-left {
+    left: 0;
+  }
+  
+  .button-right {
+    right: 0;
+  }
+  
+  .projet-card-wrapper {
+
+    width: 100%;
+    margin: 0 2rem; /* Ajoute un espacement entre les flèches */
+    display: flex;
+    justify-content: center;
+  }
+  
