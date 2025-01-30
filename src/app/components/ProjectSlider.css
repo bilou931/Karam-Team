@@ -20,10 +20,29 @@
     align-items: center;
     width: 90%;
     justify-content: center;
-
+    /* overflow: hidden; */
 
   }
-  
+
+
+  .projet-card-wrapper {
+
+    width: 100%;
+    margin: 0 2rem; /* Ajoute un espacement entre les flèches */
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+/* Animation vers la gauche */
+/* .projet-card-wrapper.left {
+  transform: translateX(-100%);
+} */
+
+/* Animation vers la droite */
+/* .projet-card-wrapper.right {
+  transform: translateX(100%);
+}
+   */
   .slider-button {
     position: relative;
     border-radius: 50%;
@@ -44,11 +63,41 @@
     right: 0;
   }
   
-  .projet-card-wrapper {
+ 
+  /* Animation pour faire disparaître à gauche et entrer par la droite */
+.slide-left {
+  animation: slideLeft 0.3s ease-in-out forwards;
+}
 
-    width: 100%;
-    margin: 0 2rem; /* Ajoute un espacement entre les flèches */
-    display: flex;
-    justify-content: center;
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
   }
-  
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Animation pour faire disparaître à droite et entrer par la gauche */
+.slide-right {
+  animation: slideRight 0.3s ease-in-out forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

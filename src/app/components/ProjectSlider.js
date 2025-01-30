@@ -18,7 +18,7 @@ const projets = [
     description: "Projet en cours pour financer une école au Sénégal.",
   },
   {
-    image: "/images/collecte.jpg",
+    image: "image00023.jpeg",
     title: "Collecte de dons",
     description: "Récolte de vêtements et matériel pour les familles en difficulté.",
   },
@@ -26,32 +26,35 @@ const projets = [
 
 export default function ProjetSlider() {
   const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(""); // "slide-left" ou "slide-right"
 
   const prevSlide = () => {
-    setIndex(index === 0 ? projets.length - 1 : index - 1);
+    setDirection("slide-right");
+    setTimeout(() => {
+      setIndex(index === 0 ? projets.length - 1 : index - 1);
+      setDirection("");
+    }, 300);
   };
 
   const nextSlide = () => {
-    setIndex(index === projets.length - 1 ? 0 : index + 1);
+    setDirection("slide-left");
+    setTimeout(() => {
+      setIndex(index === projets.length - 1 ? 0 : index + 1);
+      setDirection("");
+    }, 300);
   };
-
   return (
     <div className="projet-slider">
-  <h2>Actualité</h2>
-  <div className="slider-container">
-    {/* <button onClick={prevSlide} className="slider-button button-left"> */}
-      <ChevronLeft className="slider-button button-left" onClick={prevSlide} size={44} />
-    {/* </button> */}
+      <h2>Actualité</h2>
+      <div className="slider-container">
+        <ChevronLeft className="slider-button button-left" onClick={prevSlide} size={44} />
 
-    <div className="projet-card-wrapper">
-      <ProjetCard {...projets[index]} />
+        <div className={`projet-card-wrapper ${direction}`}>
+          <ProjetCard {...projets[index]} />
+        </div>
+
+        <ChevronRight className="slider-button button-right" onClick={nextSlide} size={44} />
+      </div>
     </div>
-
-    {/* <button onClick={nextSlide} className="slider-button button-right"> */}
-      <ChevronRight className="slider-button button-right" onClick={nextSlide} size={44} />
-    {/* </button> */}
-  </div>
-</div>
-
   );
 }

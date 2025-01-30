@@ -16,14 +16,26 @@
     align-items: center;
   }
   
+.logo-text-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin-top: 7px;
+}
+
   .logo-text {
     margin-left: 8px;
     font-size: 1.25rem;
     font-weight: 600;
-
+    line-height: 15px;
     color: #333;
   font-family: "Raleway", serif;
 
+  }
+  .logo-text-humanity {
+    color: #333;
+  font-family: "Raleway", serif;
   }
   
   .nav-links {

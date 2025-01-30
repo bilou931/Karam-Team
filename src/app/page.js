@@ -12,12 +12,15 @@ export default function Home() {
         {/* Logo */}
         <div className="logo-container">
           <Image
-            src="/karam-logo.svg" // Remplacez par le chemin de votre logo
+            src="/karam_team_logo (1).png" // Remplacez par le chemin de votre logo
             alt="Karam Team Logo"
-            width={50}
-            height={50}
+            width={75}
+            height={100}
           />
-          <span className="logo-text">KaramTeam</span>
+          <div className="logo-text-div">
+              <span className="logo-text">KaramTeam</span>
+              <span className="logo-text-humanity">Humanity</span>
+          </div>
         </div>
 
         {/* Navigation Links */}
