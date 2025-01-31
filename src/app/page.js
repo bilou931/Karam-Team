@@ -1,54 +1,24 @@
+"use client"
 import Image from "next/image";
 import './page.css'
 import ProjetSlider from "./components/ProjectSlider";
+import PhotoGallerySlider from "./components/PhotoGallerySlider";
 
 
 
 export default function Home() {
+
   return (
     <div className="">
       {/* Navbar */}
-      <nav className="navbar">
-        {/* Logo */}
-        <div className="logo-container">
-          <Image
-            src="/karam_team_logo (1).png" // Remplacez par le chemin de votre logo
-            alt="Karam Team Logo"
-            width={75}
-            height={100}
-          />
-          <div className="logo-text-div">
-              <span className="logo-text">KaramTeam</span>
-              <span className="logo-text-humanity">Humanity</span>
-          </div>
-        </div>
-
-        {/* Navigation Links */}
-        <ul className="nav-links">
-          <li>
-            <a href="#projects" className="nav-link">Nos Projets</a>
-          </li>
-          <li>
-            <a href="#about" className="nav-link">À Propos</a>
-          </li>
-          <li>
-            <a href="#donate" className="nav-link">Faire un Don</a>
-          </li>
-          <li>
-            <a href="#contact" className="nav-link">Nous Contacter</a>
-          </li>
-          <li>
-            <a href="#join" className="nav-link">Nous Rejoindre</a>
-          </li>
-        </ul>
-      </nav>
+      
     <div className="body">
       {/* Main Content */}
       <div className="home-div-pink">
         <div className="content-section">
           <div className="main-info">
               <div className="sous-main-info">
-                <h1 className="main-title">KaramTeam Humanity</h1>
+                <h1 className="main-title">KaramTeam Humanity, Unis pour nourrir les coeurs et les corps</h1>
                 <p className="main-subtitle">Nous pouvons tous venir en aide à quelqu'un.Ensemble, construisons un avenir meilleur.</p>
                 <button className="main-button">Rejoignez-nous</button>
             </div>
@@ -67,6 +37,15 @@ export default function Home() {
         </div>
         <div className="info-section">
           <ProjetSlider />
+        </div>
+        <div className="separator-div">
+            <div className="separator"></div>
+        </div>
+        <div className="photo-gallery-div">
+          <div className="photo-title-div">
+              <p className="photo-title-text">Galerie Photo</p>
+          </div>
+          <PhotoGallerySlider/>
         </div>
       </div>
     </div>

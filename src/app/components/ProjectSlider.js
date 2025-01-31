@@ -45,7 +45,10 @@ export default function ProjetSlider() {
   };
   return (
     <div className="projet-slider">
-      <h2>Actualité</h2>
+      <div className="actuality-title-div">
+          <h2 className="actuality-title-text">Actualité</h2>
+      </div>
+
       <div className="slider-container">
         <ChevronLeft className="slider-button button-left" onClick={prevSlide} size={44} />
 

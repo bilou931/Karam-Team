@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="footer-top">
         <p className="footer-message">On peut tous aider quelqu'un</p>
         <div className="footer-logo">
-          <Image src="/logo.png" alt="Karam Team Logo" width={80} height={80} />
+          <Image src="/karam_team_logo (1).png" alt="Karam Team Logo" width={80} height={80} />
           <h2>Karam Team</h2>
         </div>
         <div className="footer-socials">
