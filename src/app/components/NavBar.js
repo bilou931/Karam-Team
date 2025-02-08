@@ -1,16 +1,17 @@
 "use client"
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import './NavBar.css'
 
 
 export default function Navbar () {
+  const router = useRouter();
     const pathname = usePathname();
     const isActive = (path) => pathname === path;
     return (
         <nav className="navbar">
         {/* Logo */}
-        <div className="logo-container">
+        <div className="logo-container" onClick={() => router.push("/")}>
           <Image
             src="/karam_team_logo1.png" // Remplacez par le chemin de votre logo
             alt="Karam Team Logo"
@@ -25,10 +26,8 @@ export default function Navbar () {
 
         {/* Navigation Links */}
         <ul className="nav-links">
-        <li>
-          <a href="/projects" className={`nav-link ${isActive("/projects") ? "active" : ""}`}>
+        <li onClick={()=>router.push("/projects")} className={`nav-link ${isActive("/projects") ? "active" : ""}`}>
             Nos Projets
-          </a>
         </li>
         <li>
           <a href="/about" className={`nav-link ${isActive("/about") ? "active" : ""}`}>

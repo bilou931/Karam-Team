@@ -63,7 +63,7 @@ export default function Home() {
         
         <div className="photo-gallery-div">
           <div className="photo-title-div">
-              <p className="photo-title-text">Galerie Photo</p>
+              <p className="photo-title-text">GALERIE PHOTO</p>
           </div>
           <PhotoGallerySlider/>
         </div>

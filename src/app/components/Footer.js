@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaSnapchatGhost } from "react-icons/fa";
 import "./Footer.css";
 
 export default function Footer() {
@@ -28,11 +28,44 @@ export default function Footer() {
               <h2>Karam Team</h2>
           </div>
           <div className="footer-socials">
-              <FaFacebook className="social-icon" />
-              <FaInstagram className="social-icon" />
-              <FaTwitter className="social-icon" />
-              <FaLinkedin className="social-icon" />
-            </div>
+      <a
+        href="https://www.instagram.com/karam.team/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-item"
+      >
+        <FaInstagram className="social-icon" />
+        <span className="social-text">karam.team</span>
+      </a>
+
+      {/* <a
+        href="https://twitter.com/karamteam"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-item"
+      >
+        <FaTwitter className="social-icon" />
+        <span className="social-text">@karamteam</span>
+      </a> */}
+      <a
+        href="https://www.snapchat.com/add/karam.team"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-item"
+      >
+        <FaSnapchatGhost className="social-icon" />
+        <span className="social-text">karam.team</span>
+      </a>
+      <a
+          href="https://linktr.ee/karamteam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-item-linktree"
+        >
+          <img src="/logo_linktree.webp" alt="Linktree" className="social-icon-linktree" />
+          <span className="social-text">Linktree</span>
+      </a>
+    </div>
           </div>
         <div className="footer-column">
           <h3>À propos</h3>

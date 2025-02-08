@@ -35,21 +35,65 @@ footer {
     font-family: "Raleway";
   }
   
-  .footer-socials {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-  }
-  
-  .social-icon {
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
+  /* Conteneur des réseaux sociaux */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 7px;
+}
+
+/* Chaque élément (logo + pseudo) */
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+.social-item-linktree {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 7px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+/* Icônes */
+.social-icon {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+/* Icônes */
+.social-icon-linktree {
+  color: white;
+  transition: transform 0.2s ease;
+  width: 28px;
+}
+
+/* Texte du pseudo */
+.social-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Effet au survol */
+.social-item:hover, .social-item-linktree:hover {
+  transform: scale(1.01);
+  border: 1px solid #89b982;
+}
+
   
   .social-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
   
   /* Section verte foncée */

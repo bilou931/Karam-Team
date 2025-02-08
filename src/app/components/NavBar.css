@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pochaevsk&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-  
-.navbar {
+  .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,14 +6,23 @@
   padding: 15px 22px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  gap: 30px;
+  /* gap: 30px; */
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  width: 60px;
+  /* width: 60px; */
+  cursor: pointer; /* Rend cliquable */
+  /* padding: 10px; */
+  border-radius: 8px;
+  transition: transform 0.2s ease, border 0.3s ease;
+}
 
+/* Effet de survol */
+.logo-container:hover {
+  border: 2px solid #89b982; /* Bordure verte */
+  transform: scale(1.05); /* Légère augmentation */
 }
 
 .logo-text-div {
@@ -61,6 +67,7 @@
   position: relative;
   display: inline-block; /* Permet l'effet de scale */
   transition: color 0.3s ease, font-size 0.3s ease, transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 /* Effet de survol */

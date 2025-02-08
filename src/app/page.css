@@ -176,7 +176,9 @@
   }
 
   .photo-title-div {
-   
+
+    justify-content: center;
+    display: flex;
     width: 80%;
     text-align: start;
     padding: 15px 0; /* Ajoute un peu d'espace autour du texte */
@@ -186,13 +188,16 @@
   .photo-title-text {
   padding: 15px 0;
     font-size: 2rem; /* Texte assez gros */
-    font-weight: bold; /* Texte en gras */
-    color: #333;
-    text-decoration: underline;
-    text-decoration-color: #89b982; /* Souligne avec la couleur demandée */
-    text-underline-offset: 5px; /* Décale un peu le soulignement pour le rendre plus visible */
-    letter-spacing: 1px; /* Espacement des lettres pour un effet plus aéré */
-    font-family: "Arial", sans-serif; /* Une police propre et lisible */
+    font-weight: 800; /* Texte en gras */
+
+    /* color: #333; */
+    color: #89b982;
+    /* text-decoration: underline; */
+    /* text-decoration-color: #89b982; Souligne avec la couleur demandée */
+    /* text-underline-offset: 5px; Décale un peu le soulignement pour le rendre plus visible */
+    letter-spacing: 10px; /* Espacement des lettres pour un effet plus aéré */
+    font-family: "Raleway", serif;
+    
   }
   
   .separator-div {
