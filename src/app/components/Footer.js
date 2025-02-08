@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       {/* Première section verte claire */}
-      <div className="footer-top">
+      {/* <div className="footer-top">
         <p className="footer-message">On peut tous aider quelqu'un</p>
         <div className="footer-logo">
           <Image src="/karam_team_logo (1).png" alt="Karam Team Logo" width={80} height={80} />
@@ -18,10 +18,22 @@ export default function Footer() {
           <FaTwitter className="social-icon" />
           <FaLinkedin className="social-icon" />
         </div>
-      </div>
+      </div> */}
 
       {/* Deuxième section verte foncée */}
       <div className="footer-bottom">
+        <div className="div-left">
+          <div className="footer-logo">
+              <Image src="/karam_team_logo1.png" alt="Karam Team Logo" width={80} height={80} />
+              <h2>Karam Team</h2>
+          </div>
+          <div className="footer-socials">
+              <FaFacebook className="social-icon" />
+              <FaInstagram className="social-icon" />
+              <FaTwitter className="social-icon" />
+              <FaLinkedin className="social-icon" />
+            </div>
+          </div>
         <div className="footer-column">
           <h3>À propos</h3>
           <ul>

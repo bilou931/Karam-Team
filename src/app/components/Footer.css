@@ -30,8 +30,9 @@ footer {
   
   .footer-logo h2 {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 8px;
+    font-family: "Raleway";
   }
   
   .footer-socials {
@@ -53,13 +54,20 @@ footer {
   
   /* Section verte foncée */
   .footer-bottom {
-    background-color: #36705E;
+    background-color: #103d2f;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 30px 20px;
   }
   
+  .div-left {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
   .footer-column {
     display: flex;
     flex-direction: column;

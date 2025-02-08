@@ -12,10 +12,10 @@ export default function Navbar () {
         {/* Logo */}
         <div className="logo-container">
           <Image
-            src="/karam_team_logo (1).png" // Remplacez par le chemin de votre logo
+            src="/karam_team_logo1.png" // Remplacez par le chemin de votre logo
             alt="Karam Team Logo"
-            width={75}
-            height={100}
+            width={50}
+            height={90}
           />
           <div className="logo-text-div">
               <span className="logo-text">KaramTeam</span>
@@ -45,11 +45,12 @@ export default function Navbar () {
             Nous Contacter
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="/join" className={`nav-link ${isActive("/join") ? "active" : ""}`}>
             Nous Rejoindre
           </a>
-        </li>
+        </li> */}
+        <button className="main-button">Rejoignez-nous</button>
       </ul>
       </nav>
     )
