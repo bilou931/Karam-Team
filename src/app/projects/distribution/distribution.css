@@ -1,0 +1,106 @@
+/* Conteneur principal */
+.project-detail-container {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Contenu principal (Texte + Vidéo) */
+  .project-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Texte à gauche */
+  .project-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #36705E;
+    margin-bottom: 20px;
+  }
+  
+  .project-description {
+    font-size: 1.2rem;
+    color: #666; /* Texte gris */
+    line-height: 1.6;
+  }
+  
+  /* Vidéo à droite */
+  .project-video {
+    flex: 1;
+  }
+  
+  .distribution-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation vers les autres projets */
+  .related-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #36705E;
+    margin-top: 50px;
+  }
+  
+  /* Grid des autres projets */
+  .related-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Cartes des projets */
+  .project-card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image de fond des cartes */
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay sombre avec texte centré */
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .project-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  

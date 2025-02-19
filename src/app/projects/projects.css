@@ -1,0 +1,79 @@
+/* Conteneur principal */
+.projects-container {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  /* Titre */
+  .projects-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #36705E;
+  }
+
+  .text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-text-under-title {
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Raleway';
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+  
+  /* Grid pour afficher les catégories */
+  .projects-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Cartes des projets */
+  .project-card2 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image de fond des cartes */
+  .project-image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay sombre avec texte centré */
+  .project-overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-text2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
