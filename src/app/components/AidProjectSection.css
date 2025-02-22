@@ -1,0 +1,154 @@
+.project-detail-container {
+    padding: 40px;
+    text-align: center;
+    justify-items: center;
+  }
+
+   /* Contenu principal (Texte + Vidéo) */
+   .project-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+  }
+  
+  /* Texte à gauche */
+  .project-text {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #36705E;
+    margin-bottom: 20px;
+  }
+  .project-sous-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #36705E;
+    margin-bottom: 20px;
+  }
+  
+  .project-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Texte supplémentaire pour International */
+  .project-extra {
+    font-size: 1.1rem;
+    color: #444;
+    font-style: italic;
+    margin-top: 15px;
+  }
+  
+  /* Vidéo à droite */
+  .project-video {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .distribution-video {
+    /* width: 100%; */
+    /* height: auto; */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 650px;
+    /* object-fit: fill; */
+  }
+  
+.international-video {
+  border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    object-fit: cover;
+}
+
+.international-video-arbre {
+  width: 80%;
+  border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 550px;
+    object-fit: cover;
+}
+
+
+.related-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #36705E;
+    margin-top: 50px;
+  }
+  
+  /* Grid des autres projets */
+  .related-projects {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+    /* justify-items: center; */
+    margin-top: 20px;
+    justify-content: center;
+    gap: 50px;
+    /* background-color: rebeccapurple; */
+
+  }
+  
+  /* Cartes des projets */
+  .project-card {
+    position: relative;
+    width: 175px;
+    height: 175px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image de fond des cartes */
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay sombre avec texte centré */
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .project-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+
+
+  /* propre a extra page*/
+
+  .separator-project {
+    margin-top: 30px;
+    width: 70%;
+    height: 2px;
+    background-color: #a8a3a3;
+    display: flex;
+  }

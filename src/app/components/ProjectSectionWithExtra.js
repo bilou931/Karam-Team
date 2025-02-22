@@ -14,24 +14,43 @@ export default function ProjectSectionWithExtra({
 
   return (
     <div className="project-detail-container">
+          <h1 className="project-title">{title}</h1>
+
       {/* Section principale */}
       <div className="project-content">
         {/* Texte à gauche */}
         <div className="project-text">
-          <h1 className="project-title">{title}</h1>
+          <h2 className="project-sous-title">Puits</h2>
           <p className="project-description">{description}</p>
-          <p className="project-extra">{extraText}</p>
         </div>
 
         {/* Vidéo à droite */}
         <div className="project-video">
-          <video autoPlay loop muted className="distribution-video">
-            <source src={videoSrc} type="video/mp4" />
+          <video autoPlay loop muted className="international-video">
+            <source src={"/puits.mp4"} type="video/mp4" />
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
       </div>
 
+      <div className="separator-project"></div>
+
+
+      <div className="project-content">
+      <div className="project-text">
+          <h2 className="project-sous-title">Arbre</h2>
+        <p className="project-extra">{extraText}</p>
+        </div>
+
+         {/* Vidéo à droite */}
+         <div className="project-video">
+          <video autoPlay loop muted className="international-video-arbre">
+            <source src={"/arbre.mp4"} type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+        </div>
+
+      </div>
       {/* Navigation vers les autres projets */}
       <h2 className="related-title">Découvrez nos autres projets</h2>
       <div className="related-projects">
