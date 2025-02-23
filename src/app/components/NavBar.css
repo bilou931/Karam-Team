@@ -136,11 +136,13 @@
     gap: 15px;
   }
   .logo-img {
-    width: 16px;
-    height: 21px;
+    width: 28px;
+    height: 31px;
   }
   .logo-text-div{
     margin: 0;
+  display: none;
+  visibility: hidden;
   }
   .logo-text {
     font-size: 0.5rem;
@@ -149,7 +151,7 @@
     font-size: 0.5rem;
   }
   .nav-links {
-    width: 80%;
+    width: 87%;
   }
   .nav-link {
     font-size: 0.6rem;
