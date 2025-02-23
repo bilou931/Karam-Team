@@ -18,7 +18,6 @@ const images = [
     "/image00025.jpeg",
     "/image00026.jpeg",
     "/image00027.jpeg",
-    "/image00028.jpeg",
 ]
 
 export default function RamadanProjectSection({ title, description, videoSrc, otherProjects }) {

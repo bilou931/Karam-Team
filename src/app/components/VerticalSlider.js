@@ -27,7 +27,7 @@ export default function VerticalSlider({images}) {
       <div className="slider-container">
         <div
           className="slider-track"
-          style={{ transform: `translateY(-${index * 40}%)` }}
+          style={{ transform: `translateY(-${index * 50}%)` }}
         >
           {images.map((img, i) => (
             <div key={i} className="slider-item">

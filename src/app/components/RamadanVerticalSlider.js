@@ -27,7 +27,8 @@ export default function RamadanVerticalSlider({images}) {
       <div className="slider-container">
         <div
           className="slider-track"
-          style={{ transform: `translateY(-${index * 600}px)` }}
+          // style={{ transform: `translateY(-${index * 605}px)` }}
+          style={{ transform: `translateY(-${index * 7.7}%)` }}
         >
           {images.map((img, i) => (
             <div key={i} className="slider-item">
