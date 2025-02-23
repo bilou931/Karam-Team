@@ -155,12 +155,13 @@
   }
   .nav-link {
     font-size: 0.6rem;
+    text-align: center;
   }
   .main-button {
     width: auto;
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     border-radius: 10px;
-    height: 30px;
+    height: 35px;
     padding: 5px;
     
   }
@@ -188,6 +189,7 @@
   }
   .nav-link {
     font-size: 0.6rem;
+    display: flex;
   }
   .main-button {
     width: auto;
@@ -222,6 +224,7 @@
   }
   .nav-link {
     font-size: 0.8rem;
+    display: flex;
   }
   .main-button {
     width: 20%;
