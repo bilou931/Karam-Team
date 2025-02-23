@@ -1,0 +1,73 @@
+/* Conteneur principal */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Titre */
+  .contact-container h2 {
+    font-size: 2rem;
+    color: #36705E;
+    margin-bottom: 20px;
+  }
+  
+  /* Style du formulaire */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Champs de saisie */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Effet focus */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #89b982;
+    outline: none;
+    box-shadow: 0 0 5px rgba(137, 185, 130, 0.5);
+  }
+  
+  /* Zone de texte */
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  /* Bouton d'envoi */
+  .contact-form button {
+    background: #89b982;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .contact-form button:hover {
+    background: #36705E;
+  }
+  
+  /* Message de statut */
+  .contact-container p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
