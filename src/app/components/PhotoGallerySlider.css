@@ -51,6 +51,7 @@
     border: none;
     position: relative;
     transition: transform 0.2s ease-in-out;
+    color: black;
   }
   
   .gallery-button:hover {

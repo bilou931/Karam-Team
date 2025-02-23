@@ -12,11 +12,12 @@ export default function Navbar () {
         <nav className="navbar">
         {/* Logo */}
         <div className="logo-container" onClick={() => router.push("/")}>
-          <Image
+          <img
             src="/karam_team_logo1.png" // Remplacez par le chemin de votre logo
             alt="Karam Team Logo"
-            width={50}
-            height={90}
+            className="logo-img"
+            // width={50}
+            // height={90}
           />
           <div className="logo-text-div">
               <span className="logo-text">KaramTeam</span>

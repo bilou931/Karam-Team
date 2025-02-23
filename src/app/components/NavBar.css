@@ -25,6 +25,11 @@
   /* transform: scale(1); Légère augmentation */
 }
 
+.logo-img {
+  width: 50px;
+  height: 53px;
+}
+
 .logo-text-div {
   display: flex;
   flex-direction: column;
@@ -104,7 +109,7 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  width: 15%;
+  width: 18%;
   height: 50px;
   transition: background-color 0.3s ease;
 }
@@ -112,3 +117,145 @@
 .main-button:hover {
   background-color: #36705E;
 }
+
+
+
+/* 🎯 Mobile petit (≤ 375px) */
+@media screen and (max-width: 375px) {
+
+
+}
+
+
+/* 🎯 Mobile standard (375px - 480px) */
+@media screen and (min-width: 375px) {
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px 5px 10px;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .logo-img {
+    width: 15px;
+    height: 18px;
+  }
+  .logo-text-div{
+    margin: 0;
+  }
+  .logo-text {
+    font-size: 0.4rem;
+  }
+  .logo-text-humanity {
+    font-size: 0.4rem;
+  }
+  .nav-links {
+    width: 80%;
+  }
+  .nav-link {
+    font-size: 0.4rem;
+  }
+  .main-button {
+    width: auto;
+    font-size: 0.4rem;
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px;
+    
+  }
+}
+}
+
+/* 🎯 Tablette (481px - 768px) */
+@media screen and (min-width: 481px) {
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: space-evenly;
+  }
+  .logo-img {
+    width: 20px;
+    height: 23px;
+  }
+  .logo-text {
+    font-size: 0.6rem;
+  }
+  .logo-text-humanity {
+    font-size: 0.6rem;
+  }
+  .nav-links {
+    width: 70%;
+  }
+  .nav-link {
+    font-size: 0.6rem;
+  }
+  .main-button {
+    width: auto;
+    font-size: 0.6rem;
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px;
+    
+  }
+}
+}
+
+
+/* 🎯 Laptop / Desktop (769px - 1024px) */
+@media screen and (min-width: 769px) {
+@media screen and (max-width: 1024px) {
+  .navbar {
+    justify-content: space-evenly;
+  }
+  .logo-img {
+    width: 30px;
+    height: 33px;
+  }
+  .logo-text {
+    font-size: 0.8rem;
+  }
+  .logo-text-humanity {
+    font-size: 0.8rem;
+  }
+  .nav-links {
+    width: 70%;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+  .main-button {
+    width: 20%;
+    font-size: 0.8rem;
+    height: 40px;
+
+  }
+}
+}
+
+/* 🎯 Full HD et écrans larges (1025px - 1440px) */
+@media screen and (min-width: 1025px) {
+  @media screen and (max-width: 1440px) {
+  .logo-img {
+    width: 40px;
+    height: 43px;
+  }
+  .logo-text {
+    font-size: 1rem;
+  }
+  .logo-text-humanity {
+    font-size: 1rem;
+  }
+  .nav-links {
+    width: 70%;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+  .main-button {
+    width: 20%;
+  }
+}
+}
+
+
+
+/* 🎯 Ultra HD (1441px et plus) */
+/* @media screen and (min-width: 1441px) {} */

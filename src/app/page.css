@@ -301,3 +301,69 @@
   font-weight: bold;
   color: #89b982;
 }
+
+
+
+
+
+
+
+/* 🎯 Mobile petit (≤ 375px) */
+@media screen and (max-width: 375px) {
+
+
+}
+
+/* 🎯 Mobile standard (375px - 480px) */
+@media screen and (max-width: 480px) {
+  .content-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .main-info {
+    width: 100%;
+    align-items: center;
+  }
+
+}
+
+/* 🎯 Tablette (481px - 768px) */
+@media screen and (max-width: 768px) {
+  .main-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+}
+
+/* 🎯 Laptop / Desktop (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .content-section {
+    height: 90vh;
+  }
+
+}
+
+/* 🎯 Full HD et écrans larges (1025px - 1440px) */
+@media screen and (min-width: 1025px) {
+  .content-section {
+    height: 90vh;
+  }
+
+}
+
+/* 🎯 Ultra HD (1441px et plus) */
+@media screen and (min-width: 1441px) {
+  .content-section {
+    height: 98vh;
+  }
+
+}
