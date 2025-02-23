@@ -1,4 +1,4 @@
-.project-card {
+.project-card-home {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     background-color: white;
   }
   
-  .project-card img {
+  .project-card-home img {
     width: 40%;
     height: 100%;
     border-radius: 8px;
@@ -53,13 +53,14 @@
     margin-bottom: 50px;
   }
   
-  .project-title {
+  .project-title-home {
     font-size: 25px;
     font-weight: bold;
+    color: black;
     /* margin-bottom: 8px; */
   }
   
-  .project-description {
+  .project-description-home {
     font-size: 18px;
     color: #555;
   }

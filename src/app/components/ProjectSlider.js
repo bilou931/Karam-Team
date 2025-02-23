@@ -49,7 +49,7 @@ export default function ProjetSlider() {
           <h2 className="actuality-title-text">ACTUALITÉS</h2>
       </div>
 
-      <div className="slider-container">
+      <div className="slider-container-home">
         <ChevronLeft className="slider-button button-left" onClick={prevSlide} size={44} />
 
         <div className={`projet-card-wrapper ${direction}`}>
