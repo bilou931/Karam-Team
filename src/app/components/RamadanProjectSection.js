@@ -44,7 +44,7 @@ export default function RamadanProjectSection({ title, description, videoSrc, ot
       </div>
 
       {/* Navigation vers les autres projets */}
-      <h2 className="related-title">Découvrez nos autres projets</h2>
+      {/* <h2 className="related-title">Découvrez nos autres projets</h2>
       <div className="related-projects">
         {otherProjects.map((projet) => (
           <div
@@ -58,7 +58,7 @@ export default function RamadanProjectSection({ title, description, videoSrc, ot
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

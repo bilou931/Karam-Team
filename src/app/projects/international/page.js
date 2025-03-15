@@ -4,7 +4,7 @@ const otherProjects = [
     { name: "Education", slug: "education", image: "/education.jpeg" },
     { name: "Distribution", slug: "distribution", image: "/distribution.jpeg" },
     { name: "Ramadan", slug: "ramadan", image: "/ramadan.jpeg" },
-    { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
+    // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
   ];
   
   export default function International() {

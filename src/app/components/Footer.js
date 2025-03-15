@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaSnapchatGhost } from "react-icons/fa";
 import "./Footer.css";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -71,19 +72,20 @@ export default function Footer() {
           <h3>À propos</h3>
           <ul>
             <li>Informations légales</li>
-            <li>Adresse : 12 rue de la solidarité, Paris</li>
-            <li>IBAN : FR76 1234 5678 9101</li>
-            <li>Téléphone : +33 1 23 45 67 89</li>
-            <li>SIRET : 123 456 789 00010</li>
+            {/* <li>Adresse : 12 rue de la solidarité, Paris</li> */}
+            <li>IBAN : FR76 1695 8000 0199 4230 2190 077</li>
+            {/* <li>Téléphone : +33 1 23 45 67 89</li> */}
+            <li>SIRET : 927 637 603 00014</li>
           </ul>
         </div>
 
         <div className="footer-column">
           <h3>Besoins d'aide ?</h3>
           <ul>
-            <li>FAQ</li>
-            <li>Nous contacter</li>
-            <li>Assistance bénévole</li>
+            {/* <li>FAQ</li> */}
+            <li>
+            <Link href="/contact">Nous contacter</Link>
+              </li>
           </ul>
         </div>
 

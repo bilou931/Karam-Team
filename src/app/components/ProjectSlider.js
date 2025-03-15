@@ -4,23 +4,27 @@ import { useState } from "react";
 import ProjetCard from "./ProjectCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./ProjectSlider.css";
+import { redirect } from "next/dist/server/api-utils";
 
 
 const projets = [
   {
     image: "/image00015.jpeg",
-    title: "Maraude le Samedi 1er Février 2025",
-    description: "✅ Participez à notre grande maraude du samedi 1er février 2025 à Gare de l'Est ! ✅<br/>Ensemble, apportons chaleur et réconfort à ceux qui en ont le plus besoin. 💚<br/><br/>Le samedi 1er février 2025, la Karam Team organise une maraude solidaire au cœur de Paris, à Gare de l'Est. L’hiver est une période difficile pour de nombreuses personnes sans-abri, et chaque geste compte.<br/>📍 Lieu : Gare de l'Est, Paris<br/>🕕 Horaire : 18h30 – 22h00<br/>🎯 Objectif : Distribution de repas chauds",
+    title: "Maraude Ramadan",
+    description: "✅ Participez a nos maraudes spéciales Ramadan tous les samedis ! ✅<br/>Ensemble, apportons chaleur et réconfort. 💚<br/>Chaque geste compte !<br/><br/>📍 Lieu : Porte de la Villette, Paris<br/>🕕 Horaire : 18h00<br/>📅 Date : Samedis 8, 15, 22 et 29 mars 2025",
+    redirect: "/dons"
   },
   {
     image: "/image1.jpeg",
-    title: "Construction d'une école",
-    description: "Projet en cours pour financer une école au Sénégal.",
+    title: "Nos étoiles",
+    description: "💖 Pour la 3ème fois consécutive, nous ouvrons cette cagnotte afin de financer une cause nous tenant particulièrement à cœur : **les orphelins** 👶🏽❤️.<br/><br/>✨ Plus que tout, nous souhaitons leur offrir une vie dans des **conditions dignes**, entourés d’**espoir** et d’**amour** 💕🏠.<br/><br/>🙏 Nous appelons à **votre mobilisation, votre générosité et votre engagement** 🤲.<br/>📌 **À noter** : Chaque don est une **Sadaqa Jariya** 🕌💰, une action qui portera ses fruits **même après votre mort** ☝️.",
+    redirect: "/dons"
   },
   {
     image: "image00023.jpeg",
-    title: "Collecte de dons",
-    description: "Récolte de vêtements et matériel pour les familles en difficulté.",
+    title: "Les Collectes",
+    description: "🎁 **Tu souhaites faire des dons matériels** ?<br/><br/>🍞 **Denrées alimentaires**, 👕 **vêtements**, 🧴 **produits d’hygiène**, 💊 **produits de premiers soins**… **Chaque don compte** !<br/><br/>📞 N’hésite pas à nous contacter 📩, Karam Team réalise des collectes tout au long de l’année 📦🤝.",
+    redirect: "/dons"
   },
 ];
 

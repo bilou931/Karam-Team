@@ -2,8 +2,9 @@
 
 import React from "react";
 import "./ProjectCard.css"; // Importation du CSS
+import Link from "next/link";
 
-export default function ProjectCard({ image, title, description }) {
+export default function ProjectCard({ image, title, description, redirect }) {
   return (
     <div className="project-card-home">
       <img src={image} alt={title} />
@@ -16,9 +17,9 @@ export default function ProjectCard({ image, title, description }) {
                     {/* <p className="project-description">{description}</p> */}
                     <p className="project-description-home" dangerouslySetInnerHTML={{ __html: description }}></p>
             </div>
-            <button className="custom-button">
+            <Link href={redirect} className="custom-button">
               En savoir plus <span className="button-arrow">→</span>
-            </button>
+            </Link>
 
         </div>
 
