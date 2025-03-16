@@ -17,13 +17,14 @@ export default function Projects() {
 
   return (
     <div className="projects-container">
-      <div className="collectes-title">
+      <div className="text-container">
+      <div className="project-text-background">
+      
+        <div className="project-text-under-title">
+        <div className="collectes-title">
         <span className="title-black">Nos </span>
         <span className="title-green">Projets</span>
       </div>
-      <div className="text-container">
-      <div className="project-text-background">
-        <div className="project-text-under-title">
           <p>Depuis 2024, <br/>Karam Team agit pour venir en
              aide aux communautés les plus démunies <br/>que ce soit en France ou à 
              l’international.</p>

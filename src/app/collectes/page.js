@@ -11,16 +11,15 @@ const projets = [
 export default function NosCollectes() {
   return (
     <div className="collectes-container">
-      {/* ✅ Titre stylisé */}
-      <div className="collectes-title">
-        <span className="title-black">Nos </span>
-        <span className="title-green">Collectes</span>
-      </div>
-
       {/* ✅ Section avec fond d'image et texte */}
       <div className="text-container2">
       <div className="collectes-background">
         <div className="collectes-text">
+          {/* ✅ Titre stylisé */}
+      <div className="collectes-title">
+        <span className="title-black">Nos </span>
+        <span className="title-green">Collectes</span>
+      </div>
           <p>
             Chaque année, Karam Team organise des collectes de nourriture, 
             de vêtements et de fournitures scolaires pour venir en aide 

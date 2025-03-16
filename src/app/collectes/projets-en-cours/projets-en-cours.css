@@ -1,0 +1,91 @@
+/* ✅ Conteneur principal */
+.en-cours-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ✅ Bannière */
+  .en-cours-banner {
+    width: 100%;
+    height: 300px; /* Ajuste la hauteur selon tes besoins */
+    background-image: url('/images/projets-banner.jpg'); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* ✅ Overlay sombre pour lisibilité du texte */
+  .en-cours-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Assombrit légèrement l’image */
+    z-index: 1;
+  }
+  
+  /* ✅ Titre sur la bannière */
+  .en-cours-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  /* ✅ Section Texte + Image */
+  .en-cours-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px 0;
+  }
+  
+  .en-cours-text {
+    width: 50%;
+    font-size: 1.2rem;
+    color: #444;
+    text-align: justify;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .en-cours-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ✅ Section Faire un Don */
+  .don-section {
+    width: 100%;
+    background-color: #89b982; /* Vert */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.8rem;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .don-button {
+    background: white;
+    color: #36705E;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-top: 15px;
+  }
+  
+  .don-button:hover {
+    transform: scale(1.05);
+  }
+  

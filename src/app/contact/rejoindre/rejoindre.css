@@ -1,0 +1,107 @@
+/* ✅ Conteneur principal */
+.nous-rejoindre-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ✅ Bannière */
+  .nous-rejoindre-banner {
+    width: 100%;
+    height: 300px; /* Ajuste la hauteur selon tes besoins */
+    background-image: url('/images/nous-rejoindre-banner.jpg'); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* ✅ Overlay sombre pour lisibilité du texte */
+  .nous-rejoindre-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Assombrit légèrement l’image */
+    z-index: 1;
+  }
+  
+  /* ✅ Titre sur la bannière */
+  .nous-rejoindre-title {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  /* ✅ Couleurs pour le titre */
+  .text-white {
+    color: white;
+  }
+  
+  .text-green {
+    color: #89b982;
+  }
+  
+  /* ✅ Section texte */
+  .nous-rejoindre-content {
+    width: 70%;
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    margin: 40px 0;
+  }
+
+  /* ✅ Liste avec tirets */
+.custom-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .custom-list li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  /* ✅ Section WhatsApp */
+  .whatsapp-section {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 0px 0;
+  }
+  
+  .whatsapp-rejoindre-text {
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #89b982;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  .whatsapp-link:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+  }
+  
