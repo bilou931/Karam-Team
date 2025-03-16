@@ -9,24 +9,58 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #36705E;
+    color: #89b982;
   }
 
   .text-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+  position: relative; /* Nécessaire pour positionner l'image */
+  padding: 50px 0;
+    margin-bottom: 50px; 
   }
+
+  /* Ajout d’un fond d’image */
+.project-text-background {
+  width: 100%;
+  height: 350px; /* Ajuste la hauteur selon le rendu souhaité */
+  background-image: url('/maraudes2.jpeg'); /* Chemin vers ton image */
+  background-size: cover; /* L'image couvre tout */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 15px;
+}
+
+/* Overlay sombre pour améliorer la lisibilité du texte */
+.project-text-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Assombrit légèrement l’image */
+  z-index: 1;
+  border-radius: 15px;
+}
 
   .project-text-under-title {
     text-align: center;
-    font-size: 23px;
+    font-size: 1.8rem;
     font-family: 'Raleway';
-    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
-    color: black;
+    width: 70%;
+    color: white;
+    justify-content: center;
+    z-index: 2;
 }
   
   /* Grid pour afficher les catégories */
@@ -36,9 +70,29 @@
     gap: 20px;
     justify-items: center;
   }
+
+  /* ✅ Titre stylisé */
+  .collectes-title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+    /* font-weight: bold; */
+    /* margin-bottom: 30px; */
+  }
+
+  .title-black {
+    color: black;
+    font-size: 2.8rem;
+  }
+  
+  /* ✅ Collectes (en vert plus gros) */
+  .title-green {
+    color: #89b982;
+    font-size: 3rem;
+  }
   
   /* Cartes des projets */
-  .project-card2 {
+ /* .project-card2 {
     position: relative;
     width: 250px;
     height: 250px;
@@ -50,16 +104,16 @@
   
   .project-card:hover {
     transform: scale(1.05);
-  }
+  } 
   
-  /* Image de fond des cartes */
+
   .project-image2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  /* Overlay sombre avec texte centré */
+
   .project-overlay2 {
     position: absolute;
     top: 0;
@@ -76,5 +130,5 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-  }
+  }*/
   

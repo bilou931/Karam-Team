@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import "./AidProjectSection.css";
 import VerticalSlider from "./VerticalSlider";
+import CardContainer from "./CardContainer";
 
 
 const images = [
@@ -69,8 +70,8 @@ export default function AidProjectSection({
       </div>
       {/* Navigation vers les autres projets */}
       <h2 className="related-title">Découvrez nos autres projets</h2>
-      <div className="related-projects">
-        {otherProjects.map((projet) => (
+       <div className="related-projects">
+         {otherProjects.map((projet) => (
           <div
             key={projet.slug}
             className="project-card"
@@ -81,8 +82,8 @@ export default function AidProjectSection({
               <span className="project-text">{projet.name}</span>
             </div>
           </div>
-        ))}
-      </div>
+        ))} 
+      </div> 
     </div>
   );
 }

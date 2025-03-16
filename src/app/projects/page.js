@@ -2,12 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import "./projects.css";
+import CardContainer from "../components/CardContainer";
 
 const projets = [
-  { name: "Distribution", slug: "distribution", image: "/distribution.jpeg" },
-  { name: "Éducation", slug: "education", image: "/education.jpeg" },
-  { name: "International", slug: "international", image: "/international.jpeg" },
-  { name: "Ramadan", slug: "ramadan", image: "/ramadan.jpeg" },
+  { name: "Distribution", slug: "/projects/distribution", image: "/distribution.jpeg" },
+  { name: "Éducation", slug: "/projects/education", image: "/education.jpeg" },
+  { name: "International", slug: "/projects/international", image: "/international.jpeg" },
+  { name: "Ramadan", slug: "/projects/ramadan", image: "/ramadan.jpeg" },
   // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
 ];
 
@@ -16,13 +17,21 @@ export default function Projects() {
 
   return (
     <div className="projects-container">
-      <h1 className="projects-title">Nos Projets</h1>
-      <div className="text-container">
-        <div className="project-text-under-title">
-          <p>Chaque jour nous agissons pour venir en aide aux communautés les plus démunies que ce soit en France ou à l’international. Plus qu’un simple apport matériel, ce sont de réels moments de partage et de solidarité que nous cherchons à vivre avec nos chers bénéficiaires.</p>
-        </div>  
+      <div className="collectes-title">
+        <span className="title-black">Nos </span>
+        <span className="title-green">Projets</span>
       </div>
-      <div className="container-projects">
+      <div className="text-container">
+      <div className="project-text-background">
+        <div className="project-text-under-title">
+          <p>Depuis 2024, <br/>Karam Team agit pour venir en
+             aide aux communautés les plus démunies <br/>que ce soit en France ou à 
+             l’international.</p>
+        </div> 
+        </div> 
+      </div>
+      <CardContainer projets={projets} />
+      {/* <div className="container-projects">
       <div className="projects-grid2">
         {projets.map((projet) => (
           <div
@@ -37,7 +46,7 @@ export default function Projects() {
           </div>
         ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

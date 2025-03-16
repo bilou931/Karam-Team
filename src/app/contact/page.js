@@ -35,6 +35,18 @@ export default function Contact() {
   };
 
   return (
+    <>
+    <div className="text-container2">
+      <div className="project-text-background2">
+        <div className="project-text-under-title2">
+          <p>
+          Une <span className="highlight-text">question</span> ?<br/>
+  Besoin d'un <span className="highlight-text">renseignements</span> ?<br/>
+  Réponds à notre questionnaire !
+          </p>
+        </div> 
+        </div> 
+      </div>
     <div className="contact-container">
       <h2>Contactez-nous</h2>
       <form onSubmit={handleSubmit} className="contact-form">
@@ -45,5 +57,6 @@ export default function Contact() {
       </form>
       <p>{status}</p>
     </div>
+    </>
   );
 }

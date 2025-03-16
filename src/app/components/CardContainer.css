@@ -1,0 +1,57 @@
+.container-projects {
+    width: 100%;
+    /* display: flex; */
+    flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
+    justify-content: center;
+}
+
+/* Grid pour afficher les catégories */
+.projects-grid2 {
+    display: grid;
+    /* display: flex; */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Cartes des projets */
+  .project-card2 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image de fond des cartes */
+  .project-image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay sombre avec texte centré */
+  .project-overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-text2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
