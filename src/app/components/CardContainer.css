@@ -3,6 +3,7 @@
     /* display: flex; */
     flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 /* Grid pour afficher les catégories */

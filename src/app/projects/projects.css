@@ -1,7 +1,7 @@
 /* Conteneur principal */
 .projects-container {
     text-align: center;
-    padding: 40px;
+    padding: 0 40px;
   }
   
   /* Titre */
@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
   position: relative; /* Nécessaire pour positionner l'image */
-  padding: 50px 0;
+  /* padding: 50px 0; */
     margin-bottom: 50px; 
     z-index: -1;
   }
@@ -50,6 +50,8 @@
   background: rgba(0, 0, 0, 0.5); /* Assombrit légèrement l’image */
   z-index: 1;
   border-radius: 15px;
+  backdrop-filter: blur(6px); /* 🎯 Ajoute un flou */
+  -webkit-backdrop-filter: blur(6px); /* Pour Safari */
 }
 
   .project-text-under-title {

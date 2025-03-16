@@ -78,7 +78,7 @@
     justify-content: center;
     align-items: center;
   position: relative; /* Nécessaire pour positionner l'image */
-  padding: 40px;
+  padding: 0 40px;
     margin-bottom: 50px; 
     z-index: -1;
   }
@@ -110,7 +110,8 @@
   background: rgba(0, 0, 0, 0.6); /* Assombrit légèrement l’image */
   z-index: 1;
   border-radius: 15px;
-
+  backdrop-filter: blur(6px); /* 🎯 Ajoute un flou */
+  -webkit-backdrop-filter: blur(6px); /* Pour Safari */
 }
 
   .project-text-under-title2 {
