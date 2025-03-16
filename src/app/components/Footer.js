@@ -92,9 +92,17 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Nous soutenir</h3>
           <ul>
-            <li>Faire un don libre</li>
-            <li>Participer à un projet</li>
-            <li>Devenir membre</li>
+            <li>
+                <Link href="/collectes/maraudes">Faire un don libre</Link>
+            </li>
+            <li>
+                <Link href="/collectes/projets-en-cours">Participer à un projet</Link>
+            </li>
+            <li>
+              <Link target="_blank"
+                rel="noopener noreferrer" 
+                href="https://chat.whatsapp.com/EFh3aGCpj9SLdGYcqRShyt">Devenir membre</Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -66,20 +66,33 @@ const otherProjects = [
     { name: "Ramadan", slug: "ramadan", image: "/ramadan.jpeg" },
     // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
   ];
+  const description = ""
   
   export default function Distribution() {
     return (
-      <>
       <ProjectSection
         title="Distribution"
-        description="La distribution alimentaire et matérielle est un pilier essentiel de nos actions.
-        Chaque jour, nous aidons des centaines de personnes en situation de précarité en leur fournissant
-        des repas chauds, des vêtements et des produits de première nécessité."
+        description="Karam Team s’engage a travers ses maraudes solidaires mensuelles à fournir de la chaleur
+et du réconfort. <br/><br/>
+
+Les distributions permettent de fournir des repas chauds et des produits de première
+nécessité. Nous veillons également à fournir des vêtements adaptés aux différentes saisons.
+
+Dans la mesure du possible nos bénévoles qualifiés prodiguent des premiers soins et
+peuvent réaliser des pansements aux personnes superficiellement blessées.
+<br/><br/>
+Au-delà de l’aide matérielle, les maraudes de Karam Team sont un moment de partage et
+d’écoute. C’est l’occasion d’échanger avec les bénéficiaires mais également entre
+bénévoles. Chaque action est guidée par des valeurs de solidarité, de bienveillance mais
+avant tout de respect.
+<br/><br/>
+Alors, es-tu prêt à nous rejoindre ?<br/>
+Chaque aide compte et peut faire une réelle différence. Un don, un peu de temps ou un
+simple geste de partage !
+<br/>
+On ne peut pas aider tout le monde mais on peut tous aider quelqu’un."
         videoSrc="/distribution.mp4"
         otherProjects={otherProjects}
       />
-      <div>
-      </div>
-      </>
     );
   }

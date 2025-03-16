@@ -21,7 +21,7 @@ export default function ProjectSectionWithExtra({
         {/* Texte à gauche */}
         <div className="project-text">
           <h2 className="project-sous-title">Puits</h2>
-          <p className="project-description">{description}</p>
+          <p className="project-description" dangerouslySetInnerHTML={{ __html: description }}></p>
         </div>
 
         {/* Vidéo à droite */}
@@ -39,7 +39,7 @@ export default function ProjectSectionWithExtra({
       <div className="project-content">
       <div className="project-text">
           <h2 className="project-sous-title">Arbre</h2>
-        <p className="project-extra">{extraText}</p>
+        <p className="project-extra" dangerouslySetInnerHTML={{ __html: extraText }}></p>
         </div>
 
          {/* Vidéo à droite */}

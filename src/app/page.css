@@ -23,6 +23,7 @@
     justify-content: baseline;
     align-items: center;
     overflow: hidden;
+    z-index: -1;
   }
 
   .video-container {

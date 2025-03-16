@@ -13,7 +13,7 @@ export default function ProjectSection({ title, description, videoSrc, otherProj
         {/* Texte à gauche */}
         <div className="project-text">
           <h1 className="project-title">{title}</h1>
-          <p className="project-description">{description}</p>
+          <p className="project-description" dangerouslySetInnerHTML={{ __html: description }}></p>
         </div>
 
         {/* Vidéo à droite */}

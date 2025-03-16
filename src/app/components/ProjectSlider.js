@@ -12,19 +12,19 @@ const projets = [
     image: "/image00015.jpeg",
     title: "Maraude Ramadan",
     description: "✅ Participez a nos maraudes spéciales Ramadan tous les samedis ! ✅<br/>Ensemble, apportons chaleur et réconfort. 💚<br/>Chaque geste compte !<br/><br/>📍 Lieu : Porte de la Villette, Paris<br/>🕕 Horaire : 18h00<br/>📅 Date : Samedis 8, 15, 22 et 29 mars 2025",
-    redirect: "/dons"
+    redirect: "/collectes/maraudes"
   },
   {
     image: "/image1.jpeg",
     title: "Nos étoiles",
     description: "Pour la 3ème fois consécutive, nous ouvrons cette cagnotte afin de financer une cause nous tenant particulièrement à cœur : les orphelins.<br/><br/> Plus que tout, nous souhaitons leur offrir une vie dans des conditions dignes, entourés d’espoir et d’amour .<br/>🙏 Nous appelons à votre mobilisation, votre générosité et votre engagement.<br/>📌 À noter : Chaque don est une Sadaqa Jariya, une action qui portera ses fruits même après votre mort. ",
-    redirect: "/dons"
+    redirect: "/collectes/projets-en-cours"
   },
   {
     image: "image00023.jpeg",
     title: "Les Collectes",
     description: "Tu souhaites faire des dons matériels ?<br/><br/>🍞 Denrées alimentaires, 👕 vêtements, 🧴 produits d’hygiène, 💊 produits de premiers soins… Chaque don compte !<br/><br/> N’hésite pas à nous contacter, Karam Team réalise des collectes tout au long de l’année.",
-    redirect: "/dons"
+    redirect: "/collectes/maraudes"
   },
 ];
 

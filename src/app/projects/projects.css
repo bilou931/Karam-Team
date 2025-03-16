@@ -20,6 +20,7 @@
   position: relative; /* Nécessaire pour positionner l'image */
   padding: 50px 0;
     margin-bottom: 50px; 
+    z-index: -1;
   }
 
   /* Ajout d’un fond d’image */
