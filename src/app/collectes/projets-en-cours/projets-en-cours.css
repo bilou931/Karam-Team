@@ -4,13 +4,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
   }
   
   /* ✅ Bannière */
   .en-cours-banner {
     width: 100%;
-    height: 300px; /* Ajuste la hauteur selon tes besoins */
-    background-image: url('/images/projets-banner.jpg'); /* Remplace par ton image */
+    height: 350px; /* Ajuste la hauteur selon tes besoins */
+    background-image:  url('/maraudes2.jpeg'); /* Remplace par ton image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -34,7 +35,7 @@
   
   /* ✅ Titre sur la bannière */
   .en-cours-title {
-    color: white;
+    color: #89b982;
     font-size: 3rem;
     font-weight: bold;
     z-index: 2;

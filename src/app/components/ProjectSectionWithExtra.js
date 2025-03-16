@@ -15,12 +15,13 @@ export default function ProjectSectionWithExtra({
   return (
     <div className="project-detail-container">
           <h1 className="project-title">{title}</h1>
-
+          <p className="project-description"> Nos actions s'étendent au-delà des frontières. Nous travaillons avec des partenaires locaux
+          pour fournir un soutien humanitaire dans différentes régions du monde.</p>
       {/* Section principale */}
       <div className="project-content">
         {/* Texte à gauche */}
         <div className="project-text">
-          <h2 className="project-sous-title">Puits</h2>
+          <h2 className="project-sous-title">Châteaux d’eau</h2>
           <p className="project-description" dangerouslySetInnerHTML={{ __html: description }}></p>
         </div>
 
@@ -38,8 +39,8 @@ export default function ProjectSectionWithExtra({
 
       <div className="project-content">
       <div className="project-text">
-          <h2 className="project-sous-title">Arbre</h2>
-        <p className="project-extra" dangerouslySetInnerHTML={{ __html: extraText }}></p>
+          <h2 className="project-sous-title">Arbres</h2>
+        <p className="project-description" dangerouslySetInnerHTML={{ __html: extraText }}></p>
         </div>
 
          {/* Vidéo à droite */}

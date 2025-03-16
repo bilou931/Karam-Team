@@ -32,9 +32,14 @@ export default function AidProjectSection({
         {/* Texte à gauche */}
         <div className="project-text">
           <h2 className="project-sous-title">Petit-Déjeuner</h2>
-          <p className="project-description">La distribution alimentaire et matérielle est un pilier essentiel de nos actions.
-        Chaque jour, nous aidons des centaines de personnes en situation de précarité en leur fournissant
-        des repas chauds, des vêtements et des produits de première nécessité.</p>
+          <p className="project-description">
+          En 2024, Karam Team a célébré l’Aïd de la plus belle des manières : en offrant un petit-
+déjeuner généreux et chaleureux à un orphelinat.
+<br/><br/>
+L’Aïd est une fête synonyme de solidarité, de générosité et de moments partagés en famille.
+Pour que les orphelins puissent aussi vivre cette magie, nous avons organisé un petit-
+déjeuner festif.
+          </p>
         </div>
 
         {/* Vidéo à droite */}

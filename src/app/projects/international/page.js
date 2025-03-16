@@ -30,8 +30,21 @@ donner de l'eau à boire ».
 En effet, lorsque l’on fait don d’un puits ou don d’un forage, on permet à tout une
 communauté de s’hydrater, de se laver, de cuisiner et de cultiver, ainsi, on leur assure
 sécurité, santé et prospérité."
-        extraText="Nos projets internationaux incluent la construction d'écoles, l'accès à l'eau potable
-        et le soutien aux communautés vulnérables."
+        extraText="En 2024, Karam Team a franchi une nouvelle étape dans son engagement en faveur du
+développement durable et de la solidarité en participant à un projet de plantation d’arbres
+fruitiers (manguiers). Grâce au soutien précieux d’une autre association partenaire, nous
+avons pu mettre en place cette initiative porteuse d’avenir, au bénéfice des communautés
+locales du Burkina Faso.
+<br/><br/>
+Les arbres fruitiers sont une denrée rare et peuvent procurer des fruits à des familles
+entières pendant plusieurs mois de l’année.
+<br/>
+Offrir un arbre, c’est une Sadaqa Jariya (aumône qui se renouvèle) pour les familles pauvres,
+mais aussi un acte de bienfaisance envers la planète.
+<br/><br/>
+En plantant des arbres, vous ne serez que gagnants car le Prophète (Paix sur lui) a dit : «
+Toutes les fois qu’un musulman plante un arbre et qu’un être humain, une bête ou un oiseau
+en mangent, il se voit inscrire autant d’aumônes jusqu’au jour de la Résurrection ». [Muslim]"
         videoSrc="/videos/international.mp4"
         otherProjects={otherProjects}
       />

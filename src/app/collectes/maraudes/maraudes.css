@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
   }
   
   /* ✅ Bannière */
   .maraudes-banner {
     width: 100%;
-    height: 300px; /* Ajuste la hauteur selon tes besoins */
+    height: 350px; /* Ajuste la hauteur selon tes besoins */
     background-image: url('/maraudes.jpeg'); /* Remplace par ton image */
     background-size: cover;
     background-position: center;
