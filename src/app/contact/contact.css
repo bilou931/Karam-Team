@@ -78,14 +78,14 @@
     justify-content: center;
     align-items: center;
   position: relative; /* Nécessaire pour positionner l'image */
-  padding: 50px 0;
+  padding: 40px;
     margin-bottom: 50px; 
   }
 
   /* Ajout d’un fond d’image */
 .project-text-background2 {
-  width: 55%;
-  height: 250px; /* Ajuste la hauteur selon le rendu souhaité */
+  width: 100%;
+  height: 350px; /* Ajuste la hauteur selon le rendu souhaité */
   background-image: url('/maraudes2.jpeg'); /* Chemin vers ton image */
   background-size: cover; /* L'image couvre tout */
   background-position: center; /* Centre l'image */

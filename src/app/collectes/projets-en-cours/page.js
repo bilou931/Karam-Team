@@ -36,7 +36,12 @@ différence !
       {/* ✅ Faire un Don */}
       <div className="don-section">
         <h2>Faire un don €</h2>
-        <button className="don-button">Participer</button>
+        <button
+  className="don-button"
+  onClick={() => window.open("https://www.cotizup.com/ramadan-2025-kt", "_blank")}
+>
+  Participer
+</button>
       </div>
     </div>
   );

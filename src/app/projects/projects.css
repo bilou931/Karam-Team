@@ -53,7 +53,7 @@
 
   .project-text-under-title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-family: 'Raleway';
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +91,7 @@
   .title-green {
     color: #89b982;
     font-size: 3rem;
+    text-decoration: underline;
   }
   
   /* Cartes des projets */

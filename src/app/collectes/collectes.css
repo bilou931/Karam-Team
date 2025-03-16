@@ -19,7 +19,7 @@
   
   /* ✅ Nos (en noir) */
   .title-black {
-    color: black;
+    color: white;
     font-size: 2.8rem;
   }
   
@@ -27,6 +27,7 @@
   .title-green {
     color: #89b982;
     font-size: 3rem;
+    text-decoration: underline;
   }
   
    .text-container2 {
@@ -71,7 +72,7 @@
   /* ✅ Texte blanc centré sur l'image */
   .collectes-text {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-family: "Raleway", sans-serif;
     width: 60%;
     color: white;

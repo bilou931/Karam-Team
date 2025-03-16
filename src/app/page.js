@@ -13,11 +13,11 @@ export default function Home() {
       commentaire: "Barak Allahou fikoum, je tenais à vous remercier de m’avoir permis de participer à cette maraude. C’était ma première fois, et franchement, j’ai été agréablement surprise par l’organisation, l’ambiance et surtout l’esprit de solidarité qui régnait tout au long de la soirée. J’ai ressenti une immense gratitude de pouvoir apporter ma petite pierre à l’édifice.J’ai hâte d’en refaire une, inshallah, et de continuer à donner de mon temps pour ces actions essentielles. Encore merci pour votre accueil.",
     },
     {
-      nom: "Marc D.",
+      nom: "Marc",
       commentaire: "J'ai eu l'occasion de voir leur travail de près, et l'impact est incroyable. Bravo à toute l'équipe !",
     },
     {
-      nom: "Fatima R.",
+      nom: "Fatima",
       commentaire: "Donner à cette association m’a permis de contribuer à une vraie cause. Merci pour ce que vous faites !",
     },
   ];
@@ -101,3 +101,4 @@ export default function Home() {
   </div>
   );
 }
+

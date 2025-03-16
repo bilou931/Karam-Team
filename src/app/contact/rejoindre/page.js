@@ -42,7 +42,7 @@ export default function NousRejoindre() {
       <div className="whatsapp-section">
         <p className="whatsapp-rejoindre-text">Rejoignez notre groupe WhatsApp pour être informé de nos prochaines actions !</p>
         <a
-          href="https://chat.whatsapp.com/XXXXXXXXXX" // Remplace par ton lien WhatsApp
+          href="https://chat.whatsapp.com/EFh3aGCpj9SLdGYcqRShyt" // Remplace par ton lien WhatsApp
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-link"

@@ -98,6 +98,7 @@
     border-radius: 5px;
     text-decoration: none;
     transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+    margin-top: 50px;
   }
   
   .whatsapp-link:hover {

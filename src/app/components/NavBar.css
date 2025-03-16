@@ -106,7 +106,8 @@
   padding: 0px 0px;
   font-size: 1rem;
   color: white;
-  background-color: #89b982;
+  /* background-color: #89b982; */
+  background-color: pink;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -114,10 +115,12 @@
   height: 50px;
   transition: background-color 0.3s ease;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .main-button:hover {
-  background-color: #36705E;
+  background-color: rgb(235, 159, 172);
 }
 
 

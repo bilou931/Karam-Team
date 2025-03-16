@@ -58,6 +58,7 @@
 // }
 
 import ProjectSection from "@/app/components/ProjectSection";
+import { Link } from "lucide-react";
 
 const otherProjects = [
     { name: "Éducation", slug: "education", image: "/education.jpeg" },
@@ -68,6 +69,7 @@ const otherProjects = [
   
   export default function Distribution() {
     return (
+      <>
       <ProjectSection
         title="Distribution"
         description="La distribution alimentaire et matérielle est un pilier essentiel de nos actions.
@@ -76,5 +78,8 @@ const otherProjects = [
         videoSrc="/distribution.mp4"
         otherProjects={otherProjects}
       />
+      <div>
+      </div>
+      </>
     );
   }
