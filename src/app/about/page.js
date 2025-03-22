@@ -7,6 +7,23 @@ export default function About() {
   return (
     <div className="about-container">
       {/* Section 1 : Qui sommes-nous ? */}
+      <div className="text-container2">
+      <div className="collectes-background">
+        <div className="collectes-text">
+          {/* ✅ Titre stylisé */}
+      <div className="collectes-title">
+        <span className="title-black">À </span>
+        <span className="title-green">Propos</span>
+      </div>
+          {/* <p>
+            Chaque année, Karam Team organise des collectes de nourriture, 
+            de vêtements et de fournitures scolaires pour venir en aide 
+            aux plus démunis. Ensemble, participons à ces actions solidaires 
+            et offrons un avenir meilleur.
+          </p> */}
+          </div>
+        </div>
+      </div>
       <div className="about-section">
         <div className="about-text">
           <h2 className="about-title">Qui sommes-nous ?</h2>
@@ -30,7 +47,7 @@ Alors es tu prêt à faire parti de notre team ?
 
       {/* Section 3 : Les chiffres de Karam Team */}
       <div className="stats-container">
-        <StatCounter number={1000} text="Repas distribués" />
+        <StatCounter number={1350} text="Repas distribués" />
         <StatCounter number={150} text="Arbres plantés" />
         <StatCounter number={200} text="Kits scolaires distribués" />
       </div>

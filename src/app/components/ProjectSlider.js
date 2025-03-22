@@ -10,7 +10,7 @@ import { redirect } from "next/dist/server/api-utils";
 const projets = [
   {
     image: "/image00015.jpeg",
-    title: "Maraude Ramadan",
+    title: "Maraudes Ramadan",
     description: "✅ Participez a nos maraudes spéciales Ramadan tous les samedis ! ✅<br/>Ensemble, apportons chaleur et réconfort. 💚<br/>Chaque geste compte !<br/><br/>📍 Lieu : Porte de la Villette, Paris<br/>🕕 Horaire : 18h00<br/>📅 Date : Samedis 8, 15, 22 et 29 mars 2025",
     redirect: "/collectes/maraudes"
   },

@@ -94,3 +94,110 @@
     transform: translateX(5px); /* La flèche avance légèrement au hover */
   }
   
+
+
+  @media screen and (max-width: 375px) {
+
+
+  }
+  
+  /* 🎯 Mobile standard (375px - 480px) */
+  @media screen and (min-width: 375px) {
+  @media screen and (max-width: 480px) {
+    .project-card-home {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .project-card-home img {
+      display: flex;
+      width: 100%;
+      height: 90px;
+    }
+    .project-info {
+      margin: 0;
+    }
+    .all-text {
+      justify-content: space-between;
+      height: 100%;
+    }
+    .div-text {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .div-title {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .project-title-home {
+      font-size: 1.4rem;
+    }
+    .project-description-home {
+      font-size: 1rem;
+    }
+    .custom-button {
+      width: 100%;
+      padding: 7px;
+      justify-content: center;
+    }
+  }
+  }
+  
+  /* 🎯 Tablette (481px - 768px) */
+  @media screen and (min-width: 481px) {
+  @media screen and (max-width: 768px) {
+    .project-card-home {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .project-card-home img {
+      display: flex;
+      width: 100%;
+      height: 100px;
+    }
+    .project-info {
+      margin: 0;
+    }
+    .all-text {
+      justify-content: space-between;
+      height: 100%;
+    }
+    .div-text {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .div-title {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .project-title-home {
+      font-size: 1.4rem;
+    }
+    .project-description-home {
+      font-size: 1rem;
+    }
+    .custom-button {
+      width: 100%;
+      padding: 7px;
+      justify-content: center;
+    }
+  }
+  }
+  
+  /* 🎯 Laptop / Desktop (769px - 1024px) */
+  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 1024px) {
+  
+  }
+  
+  }
+  
+  /* 🎯 Full HD et écrans larges (1025px - 1440px) */
+  @media screen and (min-width: 1025px) {
+  
+  
+  }
+  
+  /* 🎯 Ultra HD (1441px et plus) */
+  @media screen and (min-width: 1441px) {
+  
+  }

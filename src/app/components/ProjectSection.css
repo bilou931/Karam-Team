@@ -27,6 +27,7 @@
     font-weight: bold;
     color: #36705E;
     margin-bottom: 20px;
+    /* text-align: center; */
   }
   .project-sous-title {
     font-size: 1.7rem;
@@ -39,6 +40,7 @@
     font-size: 1.2rem;
     color: #666;
     line-height: 1.6;
+    text-align: justify;
   }
   
   /* Texte supplémentaire pour International */

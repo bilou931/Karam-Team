@@ -138,3 +138,53 @@
     color: white;
   }*/
   
+
+  @media screen and (max-width: 375px) {
+
+
+  }
+  
+  /* 🎯 Mobile standard (375px - 480px) */
+  @media screen and (min-width: 375px) {
+  @media screen and (max-width: 480px) {
+    .project-text-background {
+      padding: 10px;
+      height: auto;
+    }
+    .project-text-under-title {
+      font-size: 1rem;
+      width: 100%;
+    }
+    .title-black {
+      font-size: 2rem;
+    }
+    .title-green {
+      font-size: 2.2rem;
+    }
+  }
+  }
+  
+  /* 🎯 Tablette (481px - 768px) */
+  @media screen and (min-width: 481px) {
+  @media screen and (max-width: 768px) {
+
+  }
+  }
+  
+  /* 🎯 Laptop / Desktop (769px - 1024px) */
+  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 1024px) {
+  
+  }
+  
+  }
+  
+  /* 🎯 Full HD et écrans larges (1025px - 1440px) */
+  @media screen and (min-width: 1025px) {
+ 
+  }
+  
+  /* 🎯 Ultra HD (1441px et plus) */
+  @media screen and (min-width: 1441px) {
+
+  }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import "./PhotoGallerySlider.css";
 
@@ -29,6 +29,7 @@ const photos = [
 ];
 
 export default function PhotoGallerySlider() {
+  const [windowWidth, setWindowWidth] = useState(0);
   const [index, setIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -57,6 +58,18 @@ export default function PhotoGallerySlider() {
     setIndex((prevIndex) => (prevIndex === photos.length - 1 ? 0 : prevIndex + 1));
   };
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize(); // initialise dès le début
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const getSlideWidth = () => {
+    if (windowWidth <= 768) return 100; // Mobile
+    if (windowWidth> 768 && windowWidth <= 1024) return 50; // Tablette
+    return 33.33; // Desktop
+  };
+
   return (
     <>
       <div className="photo-gallery">
@@ -66,7 +79,7 @@ export default function PhotoGallerySlider() {
           <div
             className="gallery-track"
             style={{
-              transform: `translateX(-${index * 33.33}%)`,
+              transform: `translateX(-${index * getSlideWidth()}%)`,
             }}
           >
             {photos.map((photo, i) => (
