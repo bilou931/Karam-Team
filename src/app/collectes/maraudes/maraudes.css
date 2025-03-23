@@ -138,3 +138,158 @@
     text-decoration: underline; /* Ajoute un soulignement au survol */
   }
   
+
+
+  @media screen and (max-width: 375px) {
+
+
+  }
+  
+  /* 🎯 Mobile standard (375px - 480px) */
+  @media screen and (min-width: 375px) {
+  @media screen and (max-width: 480px) {
+    .maraudes-banner {
+      height: 170px;
+    }
+    .maraudes-title {
+      font-size: 2.2rem;
+    }
+    .maraudes-content {
+      flex-direction: column;
+      width: 100%;
+    }
+    .maraudes-text {
+      width: 100%;
+      font-size: 1rem;
+    }
+    .maraudes-image {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .maraudes-image img {
+      width: 100%;
+    }
+    .don-section {
+      font-size: 1.5rem;
+    }
+    .don-buttons {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .donation-info {
+      width: 100%;
+    }
+    .donation-text {
+      font-size: 1rem;
+    }
+  }
+  }
+  
+  /* 🎯 Tablette (481px - 768px) */
+  @media screen and (min-width: 481px) {
+  @media screen and (max-width: 768px) {
+    .maraudes-banner {
+      height: 180px;
+    }
+    .maraudes-title {
+      font-size: 2.2rem;
+    }
+    .maraudes-content {
+      flex-direction: column;
+      width: 100%;
+    }
+    .maraudes-text {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    .maraudes-image {
+      width: 80%;
+      margin-top: 20px;
+    }
+    .maraudes-image img {
+      width: 100%;
+    }
+    .don-section {
+      font-size: 1.5rem;
+    }
+    .don-buttons {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .donation-info {
+      width: 100%;
+    }
+    .donation-text {
+      font-size: 1.2rem;
+    }
+  
+  }
+  }
+  
+  /* 🎯 Laptop / Desktop (769px - 1024px) */
+  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 1024px) {
+
+    .maraudes-banner {
+      height: 215px;
+    }
+    .maraudes-title {
+      font-size: 2.5rem;
+    }
+    .maraudes-content {
+      flex-direction: column;
+      width: 100%;
+    }
+    .maraudes-text {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    .maraudes-image {
+      width: 70%;
+      margin-top: 20px;
+    }
+    .maraudes-image img {
+      width: 100%;
+    }
+    .don-section {
+      font-size: 1.5rem;
+    }
+    .don-buttons {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .donation-info {
+      width: 100%;
+    }
+    .donation-text {
+      font-size: 1.2rem;
+    }
+  }
+  
+  }
+  
+  /* 🎯 Full HD et écrans larges (1025px - 1440px) */
+  @media screen and (min-width: 1025px) {
+    @media screen and (max-width: 1440px) {
+      .maraudes-content {
+        width: 100%;
+      }
+      .maraudes-image {
+        width: 45%;
+        margin-top: 20px;
+      }
+      .maraudes-image img {
+        width: 100%;
+      }
+      
+      .maraudes-text {
+        width: 45%;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  /* 🎯 Ultra HD (1441px et plus) */
+  @media screen and (min-width: 1441px) {
+  
+  }

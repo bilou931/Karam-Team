@@ -163,6 +163,17 @@
   width: 100%;
   flex: 0 0 calc(100% - 10px);
 }
+.modal-overlay {
+
+}
+.modal-content {
+  padding: 0;
+  width: 100%;
+}
+.modal-image {
+  height: 70vh;
+  width: 100%;
+}
 }
 }
 
@@ -185,6 +196,18 @@
   flex: 0 0 calc(100% - 10px);
 }
 
+.modal-overlay {
+
+}
+.modal-content {
+  padding: 0;
+  width: 100%;
+}
+.modal-image {
+  height: 80vh;
+  width: 80%;
+}
+
 }
 }
 
@@ -194,6 +217,18 @@
   .gallery-item {
   width: 100%;
   flex: 0 0 calc(50% - 10px);
+}
+
+.modal-overlay {
+
+}
+.modal-content {
+  padding: 0;
+  width: 100%;
+}
+.modal-image {
+  height: 90vh;
+  width: 55%;
 }
 }
 
