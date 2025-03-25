@@ -30,7 +30,11 @@ nécessité. Nous veillons également à fournir des vêtements adaptés aux dif
         <h2>Faire un don €</h2>
         <div className="don-buttons">
           <button className="bancaire-button">Bancaire<br/>IBAN : FR76 1695 8000 0199 4230 2190 077</button>
-          <button className="paypal-button">Paypal</button>
+          <button
+            className="paypal-button"
+            onClick={() => window.open("https://www.paypal.com/paypalme/karamteam?locale.x=fr_FR", "_blank")}
+          >Paypal
+          </button>
         </div>
       </div>
 
