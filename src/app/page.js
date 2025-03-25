@@ -56,7 +56,7 @@ export default function Home() {
            {/* Vidéo de fond */}
           <div className="video-container">
             <video autoPlay loop muted playsInline className="background-video">
-              <source src="/video_background3.mp4" type="video/mp4"y/>
+              <source src="/video_background4.mp4" type="video/mp4"y/>
               Votre navigateur ne supporte pas la vidéo.
             </video> 
             </div>
