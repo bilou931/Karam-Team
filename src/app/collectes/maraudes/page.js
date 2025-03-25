@@ -21,7 +21,7 @@ nécessité. Nous veillons également à fournir des vêtements adaptés aux dif
           </p>
         </div>
         <div className="maraudes-image">
-          <Image src="/images/maraude1.jpg" alt="Maraude Karam Team" width={500} height={350} />
+          <Image src="/slider-about10.jpeg" alt="Maraude Karam Team" width={500} height={350} />
         </div>
       </div>
 

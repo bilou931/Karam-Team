@@ -4,31 +4,8 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import "./PhotoGallerySlider.css";
 
-const photos = [
-  "/image1.jpeg",
-  "/image00002.jpeg",
-  "/image00003.jpeg",
-  "/image00004.jpeg",
-  "/image00005.jpeg",
-  "/image00006.jpeg",
-  "/image00007.jpeg",
-  "/image1.jpeg",
-  "/image00002.jpeg",
-  "/image00003.jpeg",
-  "/image00004.jpeg",
-  "/image00005.jpeg",
-  "/image00006.jpeg",
-  "/image00007.jpeg",
-  "/image1.jpeg",
-  "/image00002.jpeg",
-  "/image00003.jpeg",
-  "/image00004.jpeg",
-  "/image00005.jpeg",
-  "/image00006.jpeg",
-  "/image00007.jpeg",
-];
 
-export default function PhotoGallerySlider() {
+export default function PhotoGallerySlider({photos, canOpen}) {
   const [windowWidth, setWindowWidth] = useState(0);
   const [index, setIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
@@ -42,8 +19,11 @@ export default function PhotoGallerySlider() {
   };
 
   const openModal = (selectedIndex) => {
+    if (canOpen == true) {
     setIndex(selectedIndex);
     setModalOpen(true);
+    }
+    return
   };
 
   const closeModal = () => {

@@ -1,19 +1,50 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./apropos.css";
+import PhotoGallerySlider from "../components/PhotoGallerySlider";
+import { useInView } from "react-intersection-observer";
+
+
+const photos = [
+  "/slider-about1.jpeg",
+  "/slider-about2.jpeg",
+  "/slider-about3.jpeg",
+  "/slider-about4.jpeg",
+  "/slider-about5.jpeg",
+  "/slider-about6.jpeg",
+  "/slider-about7.jpeg",
+  "/slider-about8.jpeg",
+  "/slider-about9.jpeg",
+  "/slider-about10.jpeg",
+  "/slider-about11.jpeg",
+  "/slider-about12.jpeg",
+  "/slider-about13.jpeg",
+  "/slider-about14.jpeg",
+  "/slider-about15.jpeg",
+  "/slider-about16.jpeg",
+  "/slider-about17.jpeg",
+  "/slider-about18.jpeg",
+  "/slider-about19.jpeg",
+  "/slider-about20.jpeg",
+  "/slider-about21.jpeg",
+  "/slider-about22.jpeg",
+  "/slider-about23.jpeg",
+  "/slider-about24.jpeg",
+  "/slider-about25.jpeg",
+];
 
 export default function About() {
   return (
     <div className="about-container">
       {/* Section 1 : Qui sommes-nous ? */}
-      <div className="text-container2">
-      <div className="collectes-background">
-        <div className="collectes-text">
+      <div className="text-container2-about">
+      <div className="about-banner-background">
+        <div className="about-banner-text">
           {/* ✅ Titre stylisé */}
-      <div className="collectes-title">
-        <span className="title-black">À </span>
-        <span className="title-green">Propos</span>
+      <div className="about-banner-title">
+        <span className="title-black-about">À </span>
+        <span className="title-green-about">Propos</span>
       </div>
           {/* <p>
             Chaque année, Karam Team organise des collectes de nourriture, 
@@ -37,7 +68,8 @@ Alors es tu prêt à faire parti de notre team ?
           </p>
         </div>
         <div className="about-image">
-          <img src="/apropos.jpeg" alt="Karam Team" />
+          {/* <img src="/apropos.jpeg" alt="Karam Team" /> */}
+          <PhotoGallerySlider photos={photos} canOpen={false}/>
         </div>
       </div>
 
@@ -69,25 +101,66 @@ Elle n'est nullement ostentatoire.
 /* Composant pour l'animation des chiffres */
 function StatCounter({ number, text }) {
   const [count, setCount] = useState(0);
+  const containerRef = useRef(null);
+  const hasAnimated = useRef(false); // ref pour garder l'état même après re-render
+  const animationRef = useRef(null);
+
+  const startCountAnimation = () => {
+    let current = 0;
+    const increment = Math.ceil(number / 100);
+
+    animationRef.current = setInterval(() => {
+      current += increment;
+      if (current >= number) {
+        setCount(number);
+        clearInterval(animationRef.current);
+      } else {
+        setCount(current);
+      }
+    }, 20);
+  };
+
+  const isInViewport = (el, offset = 0.10) => {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  
+    const visibleHeight = Math.max(0, Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0));
+    const elementHeight = rect.height;
+  
+    return visibleHeight / elementHeight >= offset;
+  };
 
   useEffect(() => {
-    let start = 0;
-    const increment = Math.ceil(number / 100); // Animation fluide
-    const interval = setInterval(() => {
-      start += increment;
-      if (start >= number) {
-        setCount(number);
-        clearInterval(interval);
-      } else {
-        setCount(start);
-      }
-    }, 20); // Vitesse de l'animation
+    const handleScroll = () => {
+      const element = containerRef.current;
+      if (!element) return;
 
-    return () => clearInterval(interval);
+      if (isInViewport(element, 0.1)) {
+        if (!hasAnimated.current) {
+          startCountAnimation();
+          hasAnimated.current = true;
+        }
+      } else {
+        // reset seulement si complètement hors viewport
+        if (hasAnimated.current) {
+          setCount(0);
+          hasAnimated.current = false;
+          clearInterval(animationRef.current);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // check initial
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearInterval(animationRef.current);
+    };
   }, [number]);
 
   return (
-    <div className="stat-item">
+    <div className="stat-item" ref={containerRef}>
       <h3 className="stat-number">{count}</h3>
       <p className="stat-text">{text}</p>
     </div>

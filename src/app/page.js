@@ -5,6 +5,30 @@ import ProjetSlider from "./components/ProjectSlider";
 import PhotoGallerySlider from "./components/PhotoGallerySlider";
 
 
+const photos = [
+  "/image1.jpeg",
+  "/image00002.jpeg",
+  "/image00003.jpeg",
+  "/image00004.jpeg",
+  "/image00005.jpeg",
+  "/image00006.jpeg",
+  "/image00007.jpeg",
+  "/image1.jpeg",
+  "/image00002.jpeg",
+  "/image00003.jpeg",
+  "/image00004.jpeg",
+  "/image00005.jpeg",
+  "/image00006.jpeg",
+  "/image00007.jpeg",
+  "/image1.jpeg",
+  "/image00002.jpeg",
+  "/image00003.jpeg",
+  "/image00004.jpeg",
+  "/image00005.jpeg",
+  "/image00006.jpeg",
+  "/image00007.jpeg",
+];
+
 
 export default function Home() {
   const avis = [
@@ -65,7 +89,7 @@ export default function Home() {
           <div className="photo-title-div">
               <p className="photo-title-text">GALERIE PHOTO</p>
           </div>
-          <PhotoGallerySlider/>
+          <PhotoGallerySlider photos={photos} canOpen={true}/>
         </div>
         <div className="info-section">
           <ProjetSlider />

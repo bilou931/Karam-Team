@@ -4,8 +4,8 @@ import "./collectes.css"; // Fichier CSS pour cette page
 import CardContainer from "../components/CardContainer";
 
 const projets = [
-    { slug: "/collectes/maraudes", name: "Maraudes", image: "/images/distribution.jpg" },
-    { slug: "/collectes/projets-en-cours", name: "Projets en cours", image: "/images/education.jpg" },
+    { slug: "/collectes/maraudes", name: "Maraudes", image: "/slider-about9.jpeg" },
+    { slug: "/collectes/projets-en-cours", name: "Projets en cours", image: "/en-cours-collectes.jpeg" },
   ];
 
 export default function NosCollectes() {

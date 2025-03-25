@@ -258,6 +258,9 @@
     padding: 5px;
     
   }
+    .dropdown-menu li {
+      
+    }
 }
 }
 
@@ -325,4 +328,4 @@
 
 
 /* 🎯 Ultra HD (1441px et plus) */
-/* @media screen and (min-width: 1441px) {} */
+ @media screen and (min-width: 1441px) {}

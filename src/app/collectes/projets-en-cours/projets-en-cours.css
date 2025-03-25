@@ -93,3 +93,80 @@
     transform: scale(1.05);
   }
   
+
+  @media screen and (max-width: 375px) {
+
+
+  }
+  
+  /* 🎯 Mobile standard (375px - 480px) */
+  @media screen and (min-width: 375px) {
+  @media screen and (max-width: 480px) {
+    .en-cours-content {
+      width: 100%;
+      flex-direction: column;
+    }
+    .en-cours-text {
+      font-size: 1em;
+      width: 100%;
+    }
+    .en-cours-banner {
+      height: 200px;
+    }
+    .en-cours-title {
+      font-size: 2rem;
+    }
+  }
+  }
+  
+  /* 🎯 Tablette (481px - 768px) */
+  @media screen and (min-width: 481px) {
+  @media screen and (max-width: 768px) {
+    .en-cours-content {
+      width: 100%;
+      flex-direction: column;
+    }
+    .en-cours-text {
+      font-size: 1.2em;
+      width: 100%;
+    }
+    .en-cours-banner {
+      height: 230px;
+    }
+    .en-cours-title {
+      font-size: 2.4rem;
+    }
+  }
+  }
+  
+  /* 🎯 Laptop / Desktop (769px - 1024px) */
+  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 1024px) {
+    .en-cours-content {
+      width: 100%;
+      flex-direction: column;
+    }
+    .en-cours-text {
+      font-size: 1.3em;
+      width: 100%;
+    }
+    .en-cours-banner {
+      height: 250px;
+    }
+    .en-cours-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  }
+  
+  /* 🎯 Full HD et écrans larges (1025px - 1440px) */
+  @media screen and (min-width: 1025px) {
+    @media screen and (max-width: 1440px) {
+    }
+  }
+  
+  /* 🎯 Ultra HD (1441px et plus) */
+  @media screen and (min-width: 1441px) {
+  
+  }

@@ -29,7 +29,7 @@ différence !
           </p>
         </div>
         <div className="en-cours-image">
-          <Image src="/images/projet-ecole.jpg" alt="Projet en cours" width={500} height={350} />
+          <Image src="/encours-photo.jpeg" alt="Projet en cours" width={350} height={350} />
         </div>
       </div>
 

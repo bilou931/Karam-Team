@@ -130,3 +130,58 @@
   color: #89b982; /* Vert */
   font-weight: bold; /* Optionnel : Mettre en gras */
 }
+
+
+@media screen and (max-width: 375px) {
+
+
+}
+
+/* 🎯 Mobile standard (375px - 480px) */
+@media screen and (min-width: 375px) {
+@media screen and (max-width: 480px) {
+  .project-text-background2 {
+    height: 200px;
+  }
+  .project-text-under-title2 {
+    font-size: 1.1em;
+    width: 100%;
+  }
+}
+}
+
+/* 🎯 Tablette (481px - 768px) */
+@media screen and (min-width: 481px) {
+@media screen and (max-width: 768px) {
+  .project-text-background2 {
+    height: 230px;
+  }
+  .project-text-under-title2 {
+    width: 100%;
+  }
+}
+}
+
+/* 🎯 Laptop / Desktop (769px - 1024px) */
+@media screen and (min-width: 769px) {
+@media screen and (max-width: 1024px) {
+  .project-text-background2 {
+    height: 250px;
+  }
+}
+
+}
+
+/* 🎯 Full HD et écrans larges (1025px - 1440px) */
+@media screen and (min-width: 1025px) {
+  @media screen and (max-width: 1440px) {
+    .project-text-background2 {
+      height: 270px;
+    }
+  }
+}
+
+/* 🎯 Ultra HD (1441px et plus) */
+@media screen and (min-width: 1441px) {
+
+}
