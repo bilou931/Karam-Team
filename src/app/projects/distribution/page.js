@@ -91,7 +91,7 @@ Chaque aide compte et peut faire une réelle différence. Un don, un peu de temp
 simple geste de partage !
 <br/>
 On ne peut pas aider tout le monde mais on peut tous aider quelqu’un."
-        videoSrc="/distribution1.mp4"
+        videoSrc="/distribution.mp4"
         otherProjects={otherProjects}
       />
     );
