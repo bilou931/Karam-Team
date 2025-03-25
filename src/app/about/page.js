@@ -79,7 +79,7 @@ Alors es tu prêt à faire parti de notre team ?
 
       {/* Section 3 : Les chiffres de Karam Team */}
       <div className="stats-container">
-        <StatCounter number={1350} text="Repas distribués" />
+        <StatCounter number={1550} text="Repas distribués" />
         <StatCounter number={150} text="Arbres plantés" />
         <StatCounter number={200} text="Kits scolaires distribués" />
       </div>
