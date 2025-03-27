@@ -23,7 +23,7 @@ const projets = [
   {
     image: "image00023.jpeg",
     title: "Les Collectes",
-    description: "Tu souhaites faire des dons matériels ?<br/><br/>🍞 Denrées alimentaires, 👕 vêtements, 🧴 produits d’hygiène, 💊 produits de premiers soins… Chaque don compte !<br/><br/> N’hésite pas à nous contacter, Karam Team réalise des collectes tout au long de l’année.",
+    description: "Tu souhaites faire des dons matériels ?<br/><br/>🍞 Denrées alimentaires, 👕 vêtements, 🧴 produits d’hygiène, 💊 produits de premiers soins… Chaque don compte !<br/><br/> N’hésites pas à nous contacter, Karam Team réalise des collectes tout au long de l’année.",
     redirect: "/collectes/maraudes"
   },
 ];

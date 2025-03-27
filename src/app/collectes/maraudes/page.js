@@ -33,7 +33,9 @@ nécessité. Nous veillons également à fournir des vêtements adaptés aux dif
           <button
             className="paypal-button"
             onClick={() => window.open("https://www.paypal.com/paypalme/karamteam?locale.x=fr_FR", "_blank")}
-          >Paypal
+          >
+            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Paypal" style={{width:40}}/>
+            Paypal
           </button>
         </div>
       </div>
