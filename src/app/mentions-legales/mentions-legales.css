@@ -1,0 +1,42 @@
+.container-mentions {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .title-mentions {
+    font-size: 2.5rem;
+    color: #36705E;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .section-mentions {
+    margin-bottom: 40px;
+  }
+  
+  .section-mentions h2 {
+    font-size: 1.5rem;
+    color: #89b982;
+    margin-bottom: 10px;
+  }
+  
+  .text-mentions {
+    color: #36705E;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .title-mentions {
+      font-size: 2rem;
+    }
+  
+    .section-mentions h2 {
+      font-size: 1.3rem;
+    }
+  }
+  

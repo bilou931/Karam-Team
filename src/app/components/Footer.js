@@ -76,6 +76,9 @@ export default function Footer() {
             <li>IBAN : FR76 1695 8000 0199 4230 2190 077</li>
             {/* <li>Téléphone : +33 1 23 45 67 89</li> */}
             <li>SIRET : 927 637 603 00014</li>
+            <li>
+            <Link href="/mentions-legales">Mentions Légales</Link>
+              </li>
           </ul>
         </div>
 
