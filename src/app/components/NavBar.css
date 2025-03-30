@@ -179,6 +179,121 @@
 }
 
 
+
+
+/* Menu burger (visible uniquement sur mobile) */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+.desktop-menu {
+  display: flex;
+}
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none; /* cache les liens classiques */
+  }
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
+    z-index: 9998;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* .nav-links.open {
+    display: flex;
+  } */
+
+  .dropdown-menu {
+    position: relative;
+    top: auto;
+    left: auto;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .dropdown-menu li {
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: block; /* affiche le menu mobile */
+    position: absolute;
+    top: 55px; /* ajuste selon la hauteur de ta navbar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+    padding: 20px;
+  }
+
+  .main-menu,
+  .sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    align-items: center;
+  }
+
+  .main-menu li,
+  .sub-menu li {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .main-menu li:hover,
+  .sub-menu li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .don-btn {
+    background-color: #89b982;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .don-btn:hover {
+    background-color: #36705E;
+  }
+}
+
+
+
+
+
+
 /* 🎯 Mobile petit (≤ 375px) */
 @media screen and (max-width: 375px) {
 
