@@ -1,8 +1,46 @@
 "use client";
 import Image from "next/image";
 import "./maraudes.css"; // Fichier CSS dédié
+import { loadStripe } from "@stripe/stripe-js";
+import { useState } from "react";
+
 
 export default function Maraudes() {
+  const [donLibre, setDonLibre] = useState("");
+  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+  const handlePayment = async (amount) => {
+    try {
+      // Exemple : montant que tu veux envoyer à Stripe
+  
+      // Faire l'appel à l'API pour créer la session de paiement
+      const response = await fetch("/api/stripe/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ amount, email: "user@example.com" }), // Passe l'email si nécessaire
+      });
+  
+      const session = await response.json();
+      if (session.url) {
+        // Redirection vers Stripe Checkout
+        window.location.href = session.url;
+      } else {
+        console.error("Erreur lors de la création de la session de paiement.");
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'appel à l'API Stripe:", error);
+    }
+  };
+  const handleCustomPayment = () => {
+    if (donLibre && !isNaN(donLibre) && donLibre > 0) {
+      handlePayment(parseFloat(donLibre));
+    } else {
+      alert("Veuillez entrer un montant valide.");
+    }
+  };
+  
   return (
     <div className="maraudes-container">
       {/* ✅ Bannière avec image et titre */}
@@ -29,14 +67,25 @@ nécessité. Nous veillons également à fournir des vêtements adaptés aux dif
       <div className="don-section">
         <h2>Faire un don €</h2>
         <div className="don-buttons">
-          <button className="bancaire-button">Bancaire<br/>IBAN : FR76 1695 8000 0199 4230 2190 077</button>
-          <button
-            className="paypal-button"
-            onClick={() => window.open("https://www.paypal.com/paypalme/karamteam?locale.x=fr_FR", "_blank")}
-          >
-            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Paypal" style={{width:40}}/>
-            Paypal
+          <div className="don-amount-buttons">
+            <button onClick={() => handlePayment(5)}>5€</button>
+            <button onClick={() => handlePayment(10)}>10€</button>
+            <button onClick={() => handlePayment(20)}>20€</button>
+            <button onClick={() => handlePayment(50)}>50€</button>
+            <button onClick={() => handlePayment(100)}>100€</button>
+          </div>
+        <div className="don-libre-section">
+          <input
+            type="number"
+            value={donLibre}
+            onChange={(e) => setDonLibre(e.target.value)}
+            placeholder="Saisir un montant"
+            className="don-libre-input"
+          />
+          <button onClick={handleCustomPayment} className="don-libre-button">
+          <img src="/verifier.png"/>
           </button>
+        </div>
         </div>
       </div>
 
