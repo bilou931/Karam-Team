@@ -19,7 +19,7 @@ export default function Maraudes() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ amount, email: "user@example.com" }), // Passe l'email si nécessaire
+        body: JSON.stringify({ amount}), // Passe l'email si nécessaire
       });
   
       const session = await response.json();

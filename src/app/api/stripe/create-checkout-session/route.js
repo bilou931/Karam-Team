@@ -1,9 +1,10 @@
 // src/api/stripe/create-checkout-session/route.js
-import { stripe } from "../../../utils/stripe"; // Assure-toi d'importer ta clé Stripe ici ou d'utiliser une fonction qui initialise Stripe
+
+import { stripe } from "../../../utils/stripe";
 
 export async function POST(req) {
   try {
-    const { amount, email } = await req.json();
+    const { amount } = await req.json();
 
     // Créer la session de paiement
     const session = await stripe.checkout.sessions.create({
@@ -21,10 +22,8 @@ export async function POST(req) {
         },
       ],
       mode: "payment",
-      success_url: "https://google.com", // URL de succès
-      cancel_url: "https://chatgpt.com", // URL d'annulation
-      // success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/success`, // URL de succès
-      // cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/cancel`, // URL d'annulation
+      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/success?session_id={CHECKOUT_SESSION_ID}`, // Inclure l'ID de session dans l'URL
+      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/collectes/maraudes`, // URL d'annulation
     });
 
     return new Response(JSON.stringify({ url: session.url }), { status: 200 });
@@ -36,4 +35,3 @@ export async function POST(req) {
     );
   }
 }
-
