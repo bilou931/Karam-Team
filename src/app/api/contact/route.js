@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 export async function POST(req) {
   console.log(process.env.EMAIL_PASS)
+  console.log(process.env.EMAIL_USER)
   try {
     
 
