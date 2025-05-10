@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 40px;
+    /* padding: 0 40px; */
   }
   
   /* ✅ Bannière */
@@ -51,6 +51,7 @@
     justify-content: space-between;
     width: 80%;
     margin: 50px 0;
+    padding: 0 20px;
   }
   
   .maraudes-text {
@@ -276,6 +277,11 @@
     }
     .donation-text {
       font-size: 1rem;
+      padding: 0 20px;
+    }
+    .don-libre-section {
+        justify-content: right;
+
     }
   }
   }
@@ -316,6 +322,7 @@
     }
     .donation-text {
       font-size: 1.2rem;
+      padding: 0 20px;
     }
   
   }
@@ -358,6 +365,7 @@
     }
     .donation-text {
       font-size: 1.2rem;
+      padding: 0 20px;
     }
   }
   

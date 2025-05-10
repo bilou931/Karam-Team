@@ -1,6 +1,6 @@
 /* Conteneur global */
 .about-container {
-    padding: 40px;
+    /* padding: 40px; */
     text-align: center;
   }
   
@@ -136,7 +136,7 @@
     justify-content: center;
     align-items: center;
   position: relative; 
-  padding: 10px;
+  /* padding: 10px; */
     margin-bottom: 50px; 
     z-index: -1;
   } 
@@ -153,7 +153,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     /* margin-bottom: 75px; */
   }
   
@@ -167,7 +167,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Assombrit légèrement l’image */
     z-index: 1;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     backdrop-filter: blur(6px); /* 🎯 Ajoute un flou */
   -webkit-backdrop-filter: blur(6px); /* Pour Safari */
   }
@@ -193,7 +193,7 @@
   @media screen and (min-width: 375px) {
   @media screen and (max-width: 480px) {
     .about-container {
-      padding: 20px;
+      /* padding: 20px; */
     }
     .text-container2-about {
       padding: 0;
@@ -216,6 +216,7 @@
     .about-text {
       width: 100%;
       margin-bottom: 20px;
+      padding: 0 20px;
     }
     .about-image {
       width: 100%;
@@ -242,10 +243,10 @@
   @media screen and (min-width: 481px) {
   @media screen and (max-width: 768px) {
     .about-container {
-      padding: 20px;
+      /* padding: 20px; */
     }
     .text-container2-about {
-      padding: 5px;
+      /* padding: 5px; */
     }
     .about-banner-background {
       height: 220px;
@@ -265,6 +266,7 @@
     .about-text {
       width: 100%;
       margin-bottom: 20px;
+      padding: 0 20px;
     }
     .about-image {
       width: 100%;
@@ -291,10 +293,10 @@
   @media screen and (min-width: 769px) {
   @media screen and (max-width: 1024px) {
     .about-container {
-      padding: 20px;
+      /* padding: 20px; */
     }
     .text-container2-about {
-      padding: 5px;
+      /* padding: 5px; */
     }
     .about-banner-background {
       height: 250px;
@@ -314,6 +316,7 @@
     .about-text {
       width: 100%;
       margin-bottom: 20px;
+      padding: 0 20px;
     }
     .about-image {
       width: 100%;
