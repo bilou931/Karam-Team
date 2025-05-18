@@ -1,14 +1,38 @@
 import ProjectSectionWithExtra from "@/app/components/ProjectSectionWithExtra";
+import Head from "next/head";
 
 const otherProjects = [
-    { name: "Education", slug: "education", image: "/education.jpeg" },
-    { name: "Distribution", slug: "distribution", image: "/distribution.jpeg" },
-    { name: "Ramadan", slug: "ramadan", image: "/ramadan.jpeg" },
-    // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
-  ];
-  
-  export default function International() {
-    return (
+  { name: "Education", slug: "education", image: "/education.jpeg" },
+  { name: "Distribution", slug: "distribution", image: "/distribution.jpeg" },
+  { name: "Ramadan", slug: "ramadan", image: "/ramadan.jpeg" },
+  // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
+];
+
+export default function International() {
+  return (
+    <>
+      <Head>
+        <title>Projet International | Karam Team</title>
+        <meta
+          name="description"
+          content="Châteaux d’eau au Cambodge, arbres fruitiers au Burkina Faso : découvrez comment Karam Team agit à l’international pour un monde plus solidaire."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content="Karam Team, international, château d’eau, Cambodge, Burkina Faso, arbre fruitier, manguiers, eau potable, Sadaqa Jariya, don, aumône"
+        />
+        <meta property="og:title" content="Projet International – Karam Team" />
+        <meta
+          property="og:description"
+          content="Découvrez les projets internationaux de Karam Team : construction de châteaux d’eau, plantation d’arbres fruitiers, et actions humanitaires durables."
+        />
+        <meta property="og:image" content="/international.jpeg" />
+        <meta
+          property="og:url"
+          content="https://karamteam.fr/projects/international"
+        />
+      </Head>
       <ProjectSectionWithExtra
         title="International"
         description="En 2023, Karam Team a mené un projet essentiel pour le bien-être des communautés
@@ -48,5 +72,6 @@ en mangent, il se voit inscrire autant d’aumônes jusqu’au jour de la Résur
         videoSrc="/videos/international.mp4"
         otherProjects={otherProjects}
       />
-    );
-  }
+    </>
+  );
+}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://karamteam.fr
+
+# Sitemaps
+Sitemap: https://karamteam.fr/sitemap.xml

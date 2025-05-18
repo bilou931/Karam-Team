@@ -1,16 +1,43 @@
 import AidProjectSection from "@/app/components/AidProjectSection";
 import RamadanProjectSection from "@/app/components/RamadanProjectSection";
+import Head from "next/head";
 
 const otherProjects = [
-    { name: "Distribution", slug: "distribution", image: "/distribution.jpeg" },
-    { name: "International", slug: "international", image: "/international.jpeg" },
-    { name: "Education", slug: "education", image: "/education.jpeg" },
-    // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
-  ];
-  
-  export default function Distribution() {
-    return (
-      <>
+  { name: "Distribution", slug: "distribution", image: "/distribution.jpeg" },
+  {
+    name: "International",
+    slug: "international",
+    image: "/international.jpeg",
+  },
+  { name: "Education", slug: "education", image: "/education.jpeg" },
+  // { name: "Aïd", slug: "aid", image: "/aid.jpeg" },
+];
+
+export default function Distribution() {
+  return (
+    <>
+      <Head>
+        <title>Ramadan & Aïd | Karam Team</title>
+        <meta
+          name="description"
+          content="Pendant le mois sacré du Ramadan, Karam Team agit avec cœur : distributions, maraudes, dons, soins et collectes. Découvrez aussi nos actions pour l’Aïd."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content="Karam Team, Ramadan, Aïd, dons, maraudes, distributions, repas, vêtements, hygiène, soins, bénévolat"
+        />
+        <meta property="og:title" content="Ramadan & Aïd – Karam Team" />
+        <meta
+          property="og:description"
+          content="Agir avec solidarité pendant le mois de Ramadan : repas chauds, premiers soins, vêtements, produits d’hygiène, et collectes pour l’Aïd."
+        />
+        <meta property="og:image" content="/ramadan.jpeg" />
+        <meta
+          property="og:url"
+          content="https://karamteam.fr/projects/ramadan"
+        />
+      </Head>
       <RamadanProjectSection
         title="Ramadan"
         description="Karam Team s’engage durant la période de Ramadan à travers ses maraudes solidaires à
@@ -38,7 +65,7 @@ simple geste de partage !
 On ne peut pas aider tout le monde mais on peut tous aider quelqu’un."
         // videoSrc="/ramadan.mp4"
       />
-      <AidProjectSection title="Aïd" otherProjects={otherProjects}/>
-      </>
-    );
-  }
+      <AidProjectSection title="Aïd" otherProjects={otherProjects} />
+    </>
+  );
+}
