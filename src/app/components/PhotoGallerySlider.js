@@ -4,26 +4,29 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import "./PhotoGallerySlider.css";
 
-
-export default function PhotoGallerySlider({photos, canOpen}) {
+export default function PhotoGallerySlider({ photos, canOpen }) {
   const [windowWidth, setWindowWidth] = useState(0);
   const [index, setIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
 
   const prevSlide = () => {
-    setIndex((prevIndex) => (prevIndex === 0 ? photos.length - 3 : prevIndex - 1));
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? photos.length - 3 : prevIndex - 1
+    );
   };
 
   const nextSlide = () => {
-    setIndex((prevIndex) => (prevIndex === photos.length - 3 ? 0 : prevIndex + 1));
+    setIndex((prevIndex) =>
+      prevIndex === photos.length - 3 ? 0 : prevIndex + 1
+    );
   };
 
   const openModal = (selectedIndex) => {
     if (canOpen == true) {
-    setIndex(selectedIndex);
-    setModalOpen(true);
+      setIndex(selectedIndex);
+      setModalOpen(true);
     }
-    return
+    return;
   };
 
   const closeModal = () => {
@@ -31,11 +34,15 @@ export default function PhotoGallerySlider({photos, canOpen}) {
   };
 
   const prevModalSlide = () => {
-    setIndex((prevIndex) => (prevIndex === 0 ? photos.length - 1 : prevIndex - 1));
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? photos.length - 1 : prevIndex - 1
+    );
   };
 
   const nextModalSlide = () => {
-    setIndex((prevIndex) => (prevIndex === photos.length - 1 ? 0 : prevIndex + 1));
+    setIndex((prevIndex) =>
+      prevIndex === photos.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   useEffect(() => {
@@ -46,7 +53,7 @@ export default function PhotoGallerySlider({photos, canOpen}) {
   }, []);
   const getSlideWidth = () => {
     if (windowWidth <= 768) return 100; // Mobile
-    if (windowWidth> 768 && windowWidth <= 1024) return 50; // Tablette
+    if (windowWidth > 768 && windowWidth <= 1024) return 50; // Tablette
     return 33.33; // Desktop
   };
 
@@ -63,14 +70,27 @@ export default function PhotoGallerySlider({photos, canOpen}) {
             }}
           >
             {photos.map((photo, i) => (
-              <div className="gallery-item" key={i} onClick={() => openModal(i)}>
-                <img src={photo} alt={`Photo ${i + 1}`} />
+              <div
+                className="gallery-item"
+                key={i}
+                onClick={() => openModal(i)}
+              >
+                <img
+                  src={photo}
+                  alt={`Photo de terrain ${
+                    i + 1
+                  } - Action solidaire de Karam Team`}
+                />
               </div>
             ))}
           </div>
         </div>
 
-        <ChevronRight onClick={nextSlide} className="gallery-button" size={44} />
+        <ChevronRight
+          onClick={nextSlide}
+          className="gallery-button"
+          size={44}
+        />
       </div>
 
       {/* Modal pour afficher l'image en grand */}
@@ -80,9 +100,23 @@ export default function PhotoGallerySlider({photos, canOpen}) {
             <button className="close-button" onClick={closeModal}>
               <X size={32} />
             </button>
-            <ChevronLeft className="modal-button button-left" onClick={prevModalSlide} size={44} />
-            <img src={photos[index]} alt="Full screen" className="modal-image" />
-            <ChevronRight className="modal-button button-right" onClick={nextModalSlide} size={44} />
+            <ChevronLeft
+              className="modal-button button-left"
+              onClick={prevModalSlide}
+              size={44}
+            />
+            <img
+              src={photos[index]}
+              alt={`Photo agrandie - Action de solidarité ${
+                index + 1
+              } menée par Karam Team`}
+              className="modal-image"
+            />
+            <ChevronRight
+              className="modal-button button-right"
+              onClick={nextModalSlide}
+              size={44}
+            />
           </div>
         </div>
       )}

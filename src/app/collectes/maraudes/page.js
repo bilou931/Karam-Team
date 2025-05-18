@@ -87,7 +87,7 @@ export default function Maraudes() {
           <div className="maraudes-image">
             <Image
               src="/slider-about10.jpeg"
-              alt="Maraude Karam Team"
+              alt="Image de Maraudes Karam Team"
               width={500}
               height={350}
             />
@@ -117,7 +117,10 @@ export default function Maraudes() {
                 onClick={handleCustomPayment}
                 className="don-libre-button"
               >
-                <img src="/verifier.png" />
+                <img
+                  src="/verifier.png"
+                  alt="logo pour valider le montant à donner"
+                />
               </button>
             </div>
           </div>
@@ -126,11 +129,16 @@ export default function Maraudes() {
         {/* ✅ Icônes et texte aligné */}
         <div className="donation-info">
           <div className="donation-title">
-            <Image src="/t-shirt.png" alt="Vêtements" width={50} height={0} />
+            <Image
+              src="/t-shirt.png"
+              alt="Logo de vêtements à donner"
+              width={50}
+              height={0}
+            />
             <span>Faire un don</span>
             <Image
               src="/nourriture.png"
-              alt="Produits alimentaires"
+              alt="Logo de produits alimentaires à donner"
               width={60}
               height={40}
             />

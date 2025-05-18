@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import "./CardContainer.css"
+import "./CardContainer.css";
 
 export default function CardContainer({ projets }) {
   const router = useRouter();
@@ -14,7 +14,11 @@ export default function CardContainer({ projets }) {
             className="project-card2"
             onClick={() => router.push(`${projet.slug}`)}
           >
-            <img src={projet.image} alt={projet.name} className="project-image2" />
+            <img
+              src={projet.image}
+              alt={`Illustration du projet ${projet.name} de Karam Team`}
+              className="project-image2"
+            />
             <div className="project-overlay2">
               <span className="project-text2">{projet.name}</span>
             </div>

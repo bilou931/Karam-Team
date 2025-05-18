@@ -62,7 +62,7 @@ export default function ProjetsEnCours() {
           <div className="en-cours-image">
             <Image
               src="/encours-photo.jpeg"
-              alt="Projet en cours"
+              alt="Photo d'un calin entre une bénévole et un orphelin"
               width={350}
               height={350}
             />
