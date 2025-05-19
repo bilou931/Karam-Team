@@ -286,6 +286,35 @@
   .don-btn:hover {
     background-color: #36705e;
   }
+  .arrow {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .div-sub-menu {
+    /* background-color: #d1d0d0; */
+    width: 100%;
+    /* border-bottom: 1px solid #89b982; */
+  }
+  .sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 1rem;
+  }
+
+  .sub-menu.show {
+    max-height: 500px; /* suffisant pour afficher le contenu */
+  }
+
+  .sub-menu.hide {
+    max-height: 0;
+  }
 }
 
 /* 🎯 Mobile petit (≤ 375px) */
