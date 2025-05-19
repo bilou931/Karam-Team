@@ -52,6 +52,19 @@ export default function Home() {
   return (
     <>
       <Head>
+        <link rel="icon" href="/karam_team_logo1.png" type="image/png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Karam Team",
+              url: "https://karamteam.fr",
+              logo: "https://karamteam.fr/karam_team_logo1.png",
+            }),
+          }}
+        />
         <title>Karam Team Humanity – Aide humanitaire & solidarité</title>
         <meta
           name="description"
