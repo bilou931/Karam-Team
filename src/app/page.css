@@ -570,4 +570,8 @@
   .content-section {
     height: 98vh;
   }
+  .all-map-div {
+    width: 100%;
+    justify-items: center;
+  }
 }
