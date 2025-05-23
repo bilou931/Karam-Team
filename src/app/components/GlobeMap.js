@@ -2,7 +2,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Dynamically import Globe component to disable SSR
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
@@ -32,47 +32,64 @@ const projectData = [
 ];
 
 export default function KaramTeamGlobe() {
-  const [hoveredProject, setHoveredProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div style={{ height: "400px", width: "100%", marginTop: "40px" }}>
+    <div
+      style={{
+        height: "600px",
+        width: "100%",
+        position: "relative",
+        marginTop: "60px",
+      }}
+    >
       <Globe
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-        backgroundColor="#000"
+        globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+        backgroundColor="#f0f0f0"
         pointsData={projectData}
         pointLat={(d) => d.lat}
         pointLng={(d) => d.lng}
         pointColor={() => "#e91e63"} // rose
-        pointAltitude={0.03}
-        pointRadius={0.15}
+        pointAltitude={0.05}
+        pointRadius={0.25}
         pointLabel={(d) => d.title}
-        onPointHover={setHoveredProject}
-        onPointClick={(point) => alert(`${point.title}\n${point.description}`)}
+        onPointClick={setSelectedProject}
       />
 
-      {/* Optional custom tooltip display */}
-      {hoveredProject && (
+      {selectedProject && (
         <div
           style={{
             position: "absolute",
-            bottom: 20,
-            left: 20,
-            background: "rgba(255,255,255,0.95)",
-            padding: "10px",
-            borderRadius: "8px",
+            top: "20px",
+            left: "20px",
+            background: "rgba(255, 255, 255, 0.98)",
+            padding: "16px",
+            borderRadius: "12px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
             maxWidth: "300px",
-            zIndex: 1000,
+            zIndex: 10,
           }}
         >
-          <strong>{hoveredProject.title}</strong>
-          <br />
+          <button
+            style={{
+              float: "right",
+              border: "none",
+              background: "transparent",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+            }}
+            onClick={() => setSelectedProject(null)}
+          >
+            ✕
+          </button>
+          <strong>{selectedProject.title}</strong>
           <img
-            src={hoveredProject.image}
-            alt={hoveredProject.title}
-            style={{ width: "100%", borderRadius: "6px", marginTop: "8px" }}
+            src={selectedProject.image}
+            alt={selectedProject.title}
+            style={{ width: "100%", borderRadius: "8px", marginTop: "10px" }}
           />
-          <p style={{ fontSize: "0.9rem", marginTop: "8px" }}>
-            {hoveredProject.description}
+          <p style={{ fontSize: "0.9rem", marginTop: "10px" }}>
+            {selectedProject.description}
           </p>
         </div>
       )}
