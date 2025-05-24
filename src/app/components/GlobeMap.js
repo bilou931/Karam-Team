@@ -2,95 +2,110 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import "./GlobeMap.css";
+import { projects } from "../utils/projectList";
 
 // Dynamically import Globe component to disable SSR
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
-const projectData = [
-  {
-    title: "Maraudes à Paris",
-    description: "Distribution de repas chauds dans le 19e arrondissement",
-    lat: 48.884,
-    lng: 2.35,
-    image: "/slider-about10.jpeg",
-  },
-  {
-    title: "Kits scolaires à Casablanca",
-    description: "Fournitures distribuées à une école primaire au Maroc",
-    lat: 33.5731,
-    lng: -7.5898,
-    image: "/education.jpeg",
-  },
-  {
-    title: "Château d'eau au Cambodge",
-    description: "Accès à l’eau potable dans un village rural",
-    lat: 11.5449,
-    lng: 104.8922,
-    image: "/international.jpeg",
-  },
-];
-
 export default function KaramTeamGlobe() {
+  const containerRef = useRef(null);
+  const [dimensions, setDimensions] = useState({ width: 800, height: 500 });
+  const globeRef = useRef();
   const [selectedProject, setSelectedProject] = useState(null);
+  const [popupVisible, setPopupVisible] = useState(false);
+
+  useEffect(() => {
+    const updateSize = () => {
+      if (containerRef.current) {
+        const width = containerRef.current.offsetWidth;
+        // const height = Math.floor(width * 0.2); // ratio
+        const height = 500; // ratio
+        setDimensions({ width, height });
+      }
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  useEffect(() => {
+    const globe = globeRef.current;
+    if (!globe) return;
+
+    // Attendre que la scène soit prête
+    const wait = setTimeout(() => {
+      const controls = globe.controls();
+      const camera = globe.camera();
+
+      // Position de départ plus proche
+      camera.position.z = 250;
+
+      // Bloquer le zoom arrière
+      controls.minDistance = 200;
+      controls.maxDistance = 250;
+    }, 500);
+
+    return () => clearTimeout(wait);
+  }, []);
+
+  const handlePointClick = (point) => {
+    const sameCoordsProjects = projects.filter(
+      (p) => p.lat === point.lat && p.lng === point.lng
+    );
+    setSelectedProject(sameCoordsProjects);
+    setPopupVisible(true);
+  };
 
   return (
     <div
+      ref={containerRef}
       style={{
-        height: "600px",
         width: "100%",
         position: "relative",
-        marginTop: "60px",
       }}
     >
       <Globe
+        ref={globeRef}
+        width={dimensions.width}
+        height={dimensions.height}
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
         backgroundColor="#f0f0f0"
-        pointsData={projectData}
+        pointsData={projects}
         pointLat={(d) => d.lat}
         pointLng={(d) => d.lng}
-        pointColor={() => "#e91e63"} // rose
-        pointAltitude={0.05}
-        pointRadius={0.25}
+        pointColor={() => "pink"} // rose
+        pointAltitude={0.1}
+        pointRadius={2}
         pointLabel={(d) => d.title}
-        onPointClick={setSelectedProject}
+        onPointClick={handlePointClick}
       />
 
-      {selectedProject && (
-        <div
-          style={{
-            position: "absolute",
-            top: "20px",
-            left: "20px",
-            background: "rgba(255, 255, 255, 0.98)",
-            padding: "16px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
-            maxWidth: "300px",
-            zIndex: 10,
-          }}
-        >
+      {popupVisible && (
+        <div className="div-popup-globe">
           <button
-            style={{
-              float: "right",
-              border: "none",
-              background: "transparent",
-              cursor: "pointer",
-              fontSize: "1.2rem",
-            }}
-            onClick={() => setSelectedProject(null)}
+            className="exit-button-popup"
+            onClick={() => setPopupVisible(false)}
           >
             ✕
           </button>
-          <strong>{selectedProject.title}</strong>
-          <img
-            src={selectedProject.image}
-            alt={selectedProject.title}
-            style={{ width: "100%", borderRadius: "8px", marginTop: "10px" }}
-          />
-          <p style={{ fontSize: "0.9rem", marginTop: "10px" }}>
-            {selectedProject.description}
-          </p>
+          {selectedProject.map((project, i) => (
+            <div key={i} style={{ marginBottom: "20px" }}>
+              <strong>{project.title}</strong>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="img-popup-globe"
+                onClick={() => (window.location.href = project.redirect)}
+              />
+              <p className="project-description-popup-globe">
+                {project.description}
+              </p>
+              {i < selectedProject.length - 1 && <hr />}
+            </div>
+          ))}
         </div>
       )}
     </div>

@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useEffect } from "react";
 import "./MapProject.css";
+import { projects } from "../utils/projectList";
+import { useRouter } from "next/navigation";
 
 const DefaultIcon = L.icon({
   iconUrl: "/pin-rose.png", // <- ton icône perso
@@ -15,35 +17,25 @@ const DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-const projects = [
-  {
-    title: "Maraudes à Paris",
-    description: "Distribution de repas chauds dans le 19e arrondissement",
-    lat: 48.884,
-    lon: 2.35,
-    image: "/slider-about10.jpeg",
-  },
-  {
-    title: "Kits scolaires à Casablanca",
-    description: "Fournitures distribuées à une école primaire au Maroc",
-    lat: 33.5731,
-    lon: -7.5898,
-    image: "/education.jpeg",
-  },
-  {
-    title: "Château d'eau au Cambodge",
-    description: "Accès à l’eau potable dans un village rural",
-    lat: 11.5449,
-    lon: 104.8922,
-    image: "/international.jpeg",
-  },
-];
+function groupProjectsByCoordinates(data) {
+  const grouped = {};
+  data.forEach((project) => {
+    const key = `${project.lat},${project.lng}`;
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(project);
+  });
+  return Object.entries(grouped).map(([coords, items]) => {
+    const [lat, lng] = coords.split(",").map(Number);
+    return { lat, lng, projects: items };
+  });
+}
 
 export default function KaramTeamMap() {
+  const router = useRouter();
   useEffect(() => {
     import("leaflet/dist/leaflet.css");
   }, []);
-
+  const groupedMarkers = groupProjectsByCoordinates(projects);
   return (
     <div className="map-container">
       <MapContainer
@@ -57,19 +49,47 @@ export default function KaramTeamMap() {
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
-        {projects.map((p, index) => (
-          <Marker key={index} position={[p.lat, p.lon]}>
+        {groupedMarkers.map((marker, index) => (
+          <Marker key={index} position={[marker.lat, marker.lng]}>
             <Popup>
-              <strong>{p.title}</strong>
-              <br />
-              <img
-                src={p.image}
-                alt={`Projet : ${p.title}`}
-                width="120"
-                style={{ borderRadius: "8px", marginTop: "6px" }}
-              />
-              <br />
-              <small>{p.description}</small>
+              {marker.projects.length > 1 ? (
+                <div style={{ maxHeight: "250px", overflowY: "auto" }}>
+                  {marker.projects.map((p, i) => (
+                    <div
+                      key={i}
+                      style={{ cursor: "pointer", marginBottom: "12px" }}
+                      onClick={() => router.push(p.redirect)}
+                    >
+                      <strong>{p.title}</strong>
+                      <br />
+                      <img
+                        src={p.image}
+                        alt={`Projet : ${p.title}`}
+                        width="120"
+                        style={{ borderRadius: "8px", marginTop: "6px" }}
+                      />
+                      <br />
+                      <small>{p.description}</small>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  onClick={() => router.push(marker.projects[0].redirect)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <strong>{marker.projects[0].title}</strong>
+                  <br />
+                  <img
+                    src={marker.projects[0].image}
+                    alt={`Projet : ${marker.projects[0].title}`}
+                    width="120"
+                    style={{ borderRadius: "8px", marginTop: "6px" }}
+                  />
+                  <br />
+                  <small>{marker.projects[0].description}</small>
+                </div>
+              )}
             </Popup>
           </Marker>
         ))}

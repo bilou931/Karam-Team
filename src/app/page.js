@@ -5,8 +5,8 @@ import ProjetSlider from "./components/ProjectSlider";
 import PhotoGallerySlider from "./components/PhotoGallerySlider";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
-import MapWrapper from "./components/MapProjectClient";
-import KaramTeamGlobe from "./components/GlobeMap";
+
+import MapOrGlobeSwitcher from "./components/MapOrGlobeSwitcher";
 
 const photos = [
   "/image1.jpeg",
@@ -139,19 +139,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="photo-gallery-div">
-            <div className="photo-title-div">
-              <p className="photo-title-text">GALERIE PHOTO</p>
-            </div>
-            <PhotoGallerySlider photos={photos} canOpen={true} />
-          </div>
           <div className="info-section">
             <ProjetSlider />
           </div>
           <div className="all-map-div">
             <p className="photo-title-text">NOS ACTIONS MONDIALES</p>
-            <MapWrapper />
-            {/* <KaramTeamGlobe /> */}
+            {/* <MapWrapper />
+            <KaramTeamGlobe /> */}
+            <MapOrGlobeSwitcher />
+          </div>
+
+          <div className="photo-gallery-div">
+            <div className="photo-title-div">
+              <p className="photo-title-text">GALERIE PHOTO</p>
+            </div>
+            <PhotoGallerySlider photos={photos} canOpen={true} />
           </div>
           <div className="confiance-section">
             <div className="overlay"></div>
