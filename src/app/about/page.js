@@ -6,7 +6,6 @@ import PhotoGallerySlider from "../components/PhotoGallerySlider";
 import Head from "next/head";
 
 const photos = [
-  "/slider-about1.jpeg",
   "/slider-about2.jpeg",
   "/slider-about3.jpeg",
   "/slider-about4.jpeg",
